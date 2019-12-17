@@ -14,11 +14,13 @@
   <body>
 
     <header>
-      <div>Lunardo</div>
+      <div>
+        <img src='../../media/Lunardo(200x200)2.png' alt='Lunardo Logo'/> <!-- Logo made at https://www.freelogodesign.org/ -->
+      </div>
     </header>
 
     <nav>
-      <div>Put website navigation links here</div>
+      <div></div>
     </nav>
 
     <main>
