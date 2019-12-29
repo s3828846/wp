@@ -20,22 +20,44 @@
     </header>
 
     <nav>
-      <div>
-        About Us
+      <div class="nav-links">
+        <a href="#about">
+        About us
+        </a>
+        <a href="#price">
         Prices
-        Now Showing
+        </a>
+        <a href="#showing">
+        Showing
+        </a>
       </div>
     </nav>
 
     <main>
       <article>
-        <h2> About Us </h2>
+        <a name="about"></a>
+        <h2>
+          About Us 
+        </h2>
+        <p>
+          Lunardo cinema is a small cinema business operating to provide current and trending films at affordable prices to our local community.
+        </p>
+        <p>
+          We have recently reopened after a period of renovation to improve the quality of service we can provide. New standard and premium seating has been installed alongside new 3D Dolby Vision projection
+          and Dolby Atmos sound. For more information about the new instalments visit: <a href="https://www.dolby.com/us/en/cinema"> Dolby Cinema </a>
+        </p>
       </article>
       <article>
-        <h2> Prices
+        <a name="price"></a>
+        <h2>
+        Prices
+        </h2>
       </article>
       <article>
-        <h2>Now Showing</h2
+        <a name="showing"></a>
+        <h2>
+          Now Showing
+        </h2>
       </article>
     </main>
 
