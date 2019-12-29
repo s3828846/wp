@@ -1,19 +1,22 @@
 /* Insert your styles here */
 
 body{
-
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 header{
-    background-color: #3ba7ff;
+    background-color: hsl(207, 100%, 45%);
+    
 }
 
 nav{
-    background-color: #3ba7ff;
+    background-color: hsl(207, 100%, 60%);
     position: sticky;
     top: 0;
+}
+.nav-links{
     display: flex;
-    flex-wrap: nowrap;
+    flex-grow: 1;
 }
 
 .nav-links a{
@@ -21,6 +24,7 @@ nav{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
+    font-weight: 500;
     margin: auto;
     box-sizing: border-box;
 }
