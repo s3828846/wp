@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assignment 2</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
     
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
@@ -35,7 +35,7 @@
     </nav>
 
     <main>
-      <article>
+      <article class="us">
         <a name="about"></a>
         <h2>
           About Us 
@@ -48,13 +48,13 @@
           and Dolby Atmos sound. For more information about the new instalments visit: <a href="https://www.dolby.com/us/en/cinema" target="_blank"> Dolby Cinema </a>
         </p>
       </article>
-      <article>
+      <article class="prices">
         <a name="price"></a>
         <h2>
         Prices
         </h2>
       </article>
-      <article>
+      <article class="showing">
         <a name="showing"></a>
         <h2>
           Now Showing

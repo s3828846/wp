@@ -1,6 +1,14 @@
 /* Insert your styles here */
+header{
+    padding: 1vmin;
+}
 
 body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+body h2{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -20,6 +28,7 @@ nav{
 }
 
 .nav-links a{
+    font-family: 'Roboto Condensed', sans-serif;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
@@ -27,12 +36,21 @@ nav{
     font-weight: 500;
     margin: auto;
     box-sizing: border-box;
+    padding: 1vmin;
 }
 
-main{
-    min-height: 100%
-}
-
-a{
+.nav-links a:hover{
     color: black;
 }
+
+main article { 
+    height: 100vmin;
+    box-sizing: border-box;
+    padding: 1vmin;
+}
+
+.us {
+    border: thick;
+    border-style: none none solid none;
+}
+
