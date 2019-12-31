@@ -16,7 +16,7 @@
 
     <header>
       <div>
-        <img src='../../media/Lunardo(200x200)2.png' alt='Lunardo Logo'/> <!-- Logo made at https://www.freelogodesign.org/ -->
+        <img src='../../media/Lunardo(200x200)2.png' alt='Lunardo Logo' height="120"/> <!-- Logo made at https://www.freelogodesign.org/ -->
       </div>
     </header>
 
@@ -53,17 +53,54 @@
         <h2>
         Prices
         </h2>
+        
       </article>
       <article class="showing">
         <a name="showing"></a>
         <h2>
           Now Showing
         </h2>
+        <div>
+          <img src='imgsource.jpeg' alt='Poster'/>
+          <p>
+            Star Wars:The Rise of Skywalker
+          </p>
+          <ul>
+            <li>Day</li>
+          </ul>
+        </div>
+        <div>
+          <img src='imgsource.jpeg' alt='Poster'/>
+          <p>
+            Frozen 2
+          </p>
+          <ul>
+            <li>Day</li>
+          </ul>
+        </div>
+        <div>
+          <img src='imgsource.jpeg' alt='Poster'/>
+          <p>
+            The Aeronauts
+          </p>
+          <ul>
+            <li>Day</li>
+          </ul>
+        </div>
+        <div>
+          <img src='imgsource.jpeg' alt='Poster'/>
+          <p>
+            JoJo Rabbit
+          </p>
+          <ul>
+            <li>Day</li>
+          </ul>
+        </div>
       </article>
     </main>
 
     <footer>
-      <div> Phone: 12345678 Email: email@server.com Address: 100 Movie Street </div>
+      <div> Phone: 12345678 Email: email@server.com Address: 100 Film Street </div>
       <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script> Oliver Dunn Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
