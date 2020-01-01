@@ -1,9 +1,9 @@
 /* Insert your styles here */
 html{
     background-color: red;
-    min-height: 100%;
-    height: 100%;
     padding: 0px;
+    min-width: 320px;
+    min-height: 568px;
 }
 
 * {
@@ -64,32 +64,75 @@ article {
     box-sizing: border-box;
 }
 
+.showing{
+    display: grid;
+    grid-template-columns: 0.01fr 0.47fr 0.04fr 0.47fr 0.01fr;
+    grid-template-rows: 0.01fr 0.47fr 0.04fr 0.47fr 0.01fr;
+}
+
 .showing > div{
     background-color: pink;
-    display: inline-block;
-    min-height: 200px;
+    display: grid;
+    grid-template-columns: 0.05fr 0.45fr 0.1fr 0.35fr 0.05fr;
+    grid-template-rows: 0.05fr 0.15fr 0.05fr 0.7fr 0.05fr;
+    max-height: ;
+}
+
+.ShowingOne{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.ShowingTwo{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.ShowingThree{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.ShowingFour{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
 .showing > div > img{
     background-color: rgb(0, 255, 85);
-    float: left;
-    display: inline-block;
-    height: 80px;
-    width: 80px;
-    margin: 0px 20px 10px 0px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    width: 100%;
+    height: auto;
 }
 
 .showing > div > ul{
     list-style-type: none;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
-.showing > div > p:last-child{
-    clear:both;
+.showing > div > p{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end:6;
 }
 
-.showing > div > ul:last-child{
-    clear:both;
-}
+
+
 
 
 /*Media Queries*/ 
@@ -97,26 +140,32 @@ article {
 /*Made with reference to teh responsive html document supplied on the wp secured area site "https://titan.csit.rmit.edu.au/~e54061/wp/responsive.html"*/
 
 /*Mobile*/
-.showing > div{
-    width:100%;
-    height:100%;
-}
-
-/*Tablet and desktop (larger than 500px)*/
-@media only screen and (min-width : 501px) {
+@media only screen and (max-width : 501px) {
     .showing > div{
-        width:calc(50% - 2px);
-        height:calc(100vh / 2);
+    width:100vw;
+    height:50vh;
+    }
+    .showing > div > img{
+        width:50%;
+        height: auto;
     }
 }
 
-/*Desktop (larger than 1000px)
-@media only screen and (min-width : 1001px) {
-    .showing > div{
-        width:calc(50% - 2px);
-        height:calc(100vh / 2);
+/*Tablet and large mobile (smaller than 768px)*/
+@media only screen and (max-width : 769px) {
+    .showing{
+        display: inline-block;
     }
-}*/
+    .showing > div{
+        width:100vw;
+        height:50vh;
+    }
+    .showing > div > img {
+        width:75%;
+        height: auto;
+    }
+    
+}
 
 
 

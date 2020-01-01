@@ -52,50 +52,77 @@
         <a name="price"></a>
         <h2>
         Prices
-        </h2>
-        
+        </h2>  
       </article>
+      <!--All poster images from their respective Imbd page-->
+      <h2>
+        Now Showing
+      </h2>
       <article class="showing">
         <a name="showing"></a>
-        <h2>
-          Now Showing
-        </h2>
-        <div>
-          <img src='imgsource.jpeg' alt='Poster'/>
+        <div class="ShowingOne">
+          <img src='../../media/skywalker.png' alt='Star Wars: Rise of Skywalker (Poster)'/>
           <p>
             Star Wars:The Rise of Skywalker
           </p>
           <ul>
-            <li>Day</li>
+            <li>Monday - 12pm</li>
+            <li>Tuesday - 12pm</li>
+            <li>Wednesday - 6pm</li>
+            <li>Thursday - 6pm</li>
+            <li>Friday - 6pm</li>
+            <li>Saturday - 12pm</li>
+            <li>Sunday - 12pm</li>
           </ul>
         </div>
-        <div>
-          <img src='imgsource.jpeg' alt='Poster'/>
+        <div class="ShowingTwo">
+          <img src='../../media/Frozen2.jpg' alt='Frozen 2 (Poster)'/>
           <p>
             Frozen 2
           </p>
           <ul>
-            <li>Day</li>
+            <li>Monday - N/A</li>
+            <li>Tuesday - N/A</li>
+            <li>Wednesday - 9pm</li>
+            <li>Thursday - 9pm</li>
+            <li>Friday - 9pm</li>
+            <li>Saturday - 6pm</li>
+            <li>Sunday - 6pm</li>
           </ul>
         </div>
-        <div>
-          <img src='imgsource.jpeg' alt='Poster'/>
+        <div class="ShowingThree">
+          <img src='../../media/aeronauts.jpg' alt='The Aeronauts (Poster)'/>
           <p>
             The Aeronauts
           </p>
           <ul>
-            <li>Day</li>
+            <li>Monday - 6pm</li>
+            <li>Tuesday - 6pm</li>
+            <li>Wednesday - N/A</li>
+            <li>Thursday - N/A</li>
+            <li>Friday - N/A</li>
+            <li>Saturday - 3pm</li>
+            <li>Sunday - 3pm</li>
           </ul>
         </div>
-        <div>
-          <img src='imgsource.jpeg' alt='Poster'/>
+        <div class="ShowingFour">
+          <img src='../../media/JoJO.jpg' alt='JoJo Rabbit (Poster)'/>
           <p>
             JoJo Rabbit
           </p>
           <ul>
-            <li>Day</li>
+            <li>Monday - N/A</li>
+            <li>Tuesday - N/A</li>
+            <li>Wednesday - 12pm</li>
+            <li>Thursday - 12pm</li>
+            <li>Friday - 12pm</li>
+            <li>Saturday - 9pm</li>
+            <li>Sunday - 9pm</li>
           </ul>
         </div>
+      </article>
+      <article class="Synopsis">
+      
       </article>
     </main>
 
