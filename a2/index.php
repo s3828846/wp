@@ -62,9 +62,9 @@
         <a name="showing"></a>
         <div class="ShowingOne">
           <img src='../../media/skywalker.png' alt='Star Wars: Rise of Skywalker (Poster)'/>
-          <p>
+          <h3>
             Star Wars:The Rise of Skywalker
-          </p>
+          </h3>
           <ul>
             <li>Monday - 12pm</li>
             <li>Tuesday - 12pm</li>
@@ -77,24 +77,24 @@
         </div>
         <div class="ShowingTwo">
           <img src='../../media/Frozen2.jpg' alt='Frozen 2 (Poster)'/>
-          <p>
+          <h3>
             Frozen 2
-          </p>
+          </h3>
           <ul>
-            <li>Monday - N/A</li>
-            <li>Tuesday - N/A</li>
+            <li>Monday    - N/A</li>
+            <li>Tuesday   - N/A</li>
             <li>Wednesday - 9pm</li>
-            <li>Thursday - 9pm</li>
-            <li>Friday - 9pm</li>
-            <li>Saturday - 6pm</li>
-            <li>Sunday - 6pm</li>
+            <li>Thursday  - 9pm</li>
+            <li>Friday    - 9pm</li>
+            <li>Saturday  - 6pm</li>
+            <li>Sunday    - 6pm</li>
           </ul>
         </div>
         <div class="ShowingThree">
           <img src='../../media/aeronauts.jpg' alt='The Aeronauts (Poster)'/>
-          <p>
+          <h3>
             The Aeronauts
-          </p>
+          </h3>
           <ul>
             <li>Monday - 6pm</li>
             <li>Tuesday - 6pm</li>
@@ -107,9 +107,9 @@
         </div>
         <div class="ShowingFour">
           <img src='../../media/JoJO.jpg' alt='JoJo Rabbit (Poster)'/>
-          <p>
+          <h3>
             JoJo Rabbit
-          </p>
+          </h3>
           <ul>
             <li>Monday - N/A</li>
             <li>Tuesday - N/A</li>
@@ -121,8 +121,27 @@
           </ul>
         </div>
       </article>
-      <article class="Synopsis">
-      
+      <article class="synopsis">
+        <div class="synpanel">
+          <h3>Star Wars: The Rise of Skywalker       M</h3>
+          <p>The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.
+             Staring: Carrie Fisher, Mark Hamil, Adam Driver, Daisy Ridley, John Boyega, Oscar Issac Anthony Daniels and Naomi Ackie.
+          </p>
+          <!--Synopsis is copied form the hoyts synopsis of the film, found here https://www.hoyts.com.au/movies/star-wars-the-rise-of-skywalker-->
+          <div class="video_container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8Qn_spdM5Zg" frameborder="0" allowfullscreen></iframe>
+          <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
+          </div>
+          <div class="buttongroup">
+            <button type="button">Monday - 12pm</button>
+            <button type="button">Tuesday - 12pm</button>
+            <button type="button">Wednesday - 6pm</button>
+            <button type="button">Thursday - 6pm</button>
+            <button type="button">Friday - 6pm</button>
+            <button type="button">Saturday - 12pm</button>
+            <button type="button">Sunday - 12pm</button>
+          </div>
+        </div>
       </article>
     </main>
 
