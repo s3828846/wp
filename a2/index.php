@@ -55,8 +55,8 @@
             recline for the ultimate viewing experience. 
         </p>
         <div class="imageContainer">
-          <img src="../../media/standard.jpg" id="standard" alt='Standard Seating'/>
-          <img src="../../media/premium.jpg" id="premium" alt='Premium Seating'/>
+          <img src="../../media/standard.png" id="standard" alt='Standard Seating'/>
+          <img src="../../media/premium.png" id="premium" alt='Premium Seating'/>
         </div>
       </article>
       <h2>
