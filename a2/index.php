@@ -23,13 +23,13 @@
     <nav>
       <div class="nav-links">
         <a href="#about">
-        About us
+          About us
         </a>
         <a href="#price">
-        Prices
+          Prices
         </a>
         <a href="#showing">
-        Showing
+          Showing
         </a>
       </div>
     </nav>
@@ -70,21 +70,6 @@
         </p>
         <button  id="sButton" onclick="swapFunction(1)">Standard Ticket</button>
         <button  id="pButton" onclick="swapFunction(2)">Premium Ticket</button>
-        <script>
-          var check = 1;
-          function swapFunction(checkRecieve){
-            
-            if(check == checkRecieve) {
-
-            }else{
-            var x =  document.getElementById("tableDiv").innerHTML;
-            document.getElementById("tableDiv").innerHTML =  document.getElementById("Swap").innerHTML;
-            document.getElementById("Swap").innerHTML = x;
-            check = checkRecieve;
-            }
-            
-          }
-          </script>
         <div id="tableDiv">
           <table id="Standard">
             <tr>
@@ -230,9 +215,24 @@
       <div> Phone: 12345678 Email: email@server.com Address: 100 Film Street </div>
       <div>&copy;<script>
         document.write(new Date().getFullYear());
+          var check = 1;
+          function swapFunction(checkRecieve){
+            
+            if(check == checkRecieve) {
+
+            }
+            else {
+            var x =  document.getElementById("tableDiv").innerHTML;
+            document.getElementById("tableDiv").innerHTML =  document.getElementById("Swap").innerHTML;
+            document.getElementById("Swap").innerHTML = x;
+            check = checkRecieve;
+            }
+            
+          }
       </script> Oliver Dunn Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+      
     </footer>
 
   </body>
