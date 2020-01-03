@@ -38,21 +38,102 @@
       <article class="us">
         <a name="about"></a>
         <h2>
-          About Us 
+            About Us 
         </h2>
+        <div class="containingDiv">
+          <div class="content">
+          <p>
+            Lunardo cinema is a small cinema business operating to provide current and trending films at affordable prices to our local community.
+            We have recently reopened after a period of renovation to improve the quality of service we can provide. New standard and premium seating has been installed alongside new 3D Dolby Vision projection
+            and Dolby Atmos sound. For more information about the new instalments visit: <a href="https://www.dolby.com/us/en/cinema" target="_blank"> Dolby Cinema </a>
+          </p>
+          </div>
+        </div>
         <p>
-          Lunardo cinema is a small cinema business operating to provide current and trending films at affordable prices to our local community.
+            Below you can see the two styles of new seating that is being provided, standard and premium seating. These seats have been chosen so as to provide a more relaxing and comfortable viewing experience
+            for our patrons. Standard seating come with ample comfort and space to ensure that the experience is of maximum satisfation. The premium seating provides additional support alongside the ability to 
+            recline for the ultimate viewing experience. 
         </p>
-        <p>
-          We have recently reopened after a period of renovation to improve the quality of service we can provide. New standard and premium seating has been installed alongside new 3D Dolby Vision projection
-          and Dolby Atmos sound. For more information about the new instalments visit: <a href="https://www.dolby.com/us/en/cinema" target="_blank"> Dolby Cinema </a>
-        </p>
+        <div class="imageContainer">
+          <img src="../../media/standard.jpg" id="standard" alt='Standard Seating'/>
+          <img src="../../media/premium.jpg" id="premium" alt='Premium Seating'/>
+        </div>
       </article>
+      <h2>
+        Prices
+      </h2>  
       <article class="prices">
         <a name="price"></a>
-        <h2>
-        Prices
-        </h2>  
+        <div class="pricesGrid">
+        <p>
+          We at Lunardo strive to provide affordable pricing for all ages, as well as allowing for the additional selection of a premium service for those who wish to experience the viewing in maximum luxury.
+        </p>
+        <button  id="sButton" onclick="swapFunction(1)">Standard Ticket</button>
+        <button  id="pButton" onclick="swapFunction(2)">Premium Ticket</button>
+        <script>
+          var check = 1;
+          function swapFunction(checkRecieve){
+            
+            if(check == checkRecieve) {
+
+            }else{
+            var x =  document.getElementById("tableDiv").innerHTML;
+            document.getElementById("tableDiv").innerHTML =  document.getElementById("Swap").innerHTML;
+            document.getElementById("Swap").innerHTML = x;
+            check = checkRecieve;
+            }
+            
+          }
+          </script>
+        <div id="tableDiv">
+          <table id="Standard">
+            <tr>
+              <th>Seat Type</th>
+              <th>All day Monday and Tuesday AND 12pm on Wednesday, Thursday and Friday.</th>
+              <th>All day Saturday and Sunday and after 12pm on Wednesday, Thursday and Friday</th>
+            </tr>
+            <tr>
+              <th>Adult</th>
+              <th>15.00</th>
+              <th>20.50</th>
+            </tr>
+            <tr>
+              <th>Concession</th>
+              <th>13.00</th>
+              <th>18.00</th>
+            </tr>
+            <tr>
+              <th>Child</th>
+              <th>11.00</th>
+              <th>15.50</th>
+            </tr>
+          </table>
+        </div>
+        <div id="Swap">
+          <table id="Premium">
+            <tr>
+              <th>Seat Type</th>
+              <th>All day Monday and Tuesday AND 12pm on Wednesday, Thursday and Friday.</th>
+              <th>All day Saturday and Sunday and after 12pm on Wednesday, Thursday and Friday</th>
+            </tr>
+            <tr>
+                <th>Adult</th>
+                <th>25.00</th>
+                <th>30.00</th>
+              </tr>
+              <tr>
+                <th>Concession</th>
+                <th>23.00</th>
+                <th>27.50</th>
+              </tr>
+              <tr>
+                <th>Child</th>
+                <th>21.00</th>
+                <th>25.00</th>
+              </tr>
+          </table>
+         </div>
+        </div>
       </article>
       <!--All poster images from their respective Imbd page-->
       <h2>
