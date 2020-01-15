@@ -1,0 +1,438 @@
+/* Insert your styles here */
+html{
+    background-color: lightgrey;
+    padding: 0px;
+    min-width: 320px;
+    min-height: 568px;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+p{
+    text-align: justify;
+}
+
+header{
+    padding: 1vmin;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8ff;
+    max-width: 1300px;
+    margin: 0px auto;
+    height:100%
+}
+
+body h2, p{
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 5px;
+}
+
+header{
+    background-color: hsl(207, 100%, 45%);
+    
+}
+
+nav{
+    background-color: hsl(207, 100%, 60%);
+    position: sticky;
+    top: 0;
+}
+.nav-links{
+    display: flex;
+    flex-grow: 1;
+    max-height: 30px;
+}
+
+.nav-links a{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.nav-links a:hover{
+    color: black;
+}
+
+article { 
+    min-height:100vh;
+    box-sizing: border-box;
+}
+
+.containingDiv{
+    background-image: url(../../media/dolby.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+.content{
+    min-height: 50vh;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: 0.05fr 0.90fr 0.05fr;
+    grid-template-rows: 0.20fr 0.60fr 0.20fr;
+    background:rgba(255,255,255,0.5);
+}
+
+.content p{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+.imageContainer{
+    display: grid;
+    min-height: 50%;
+    grid-template-columns: 0.05fr 0.4fr 0.10fr 0.4fr 0.05fr;
+    grid-template-rows: 0.05fr 0.45fr;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+#standard{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+
+#premium{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.us > div > img{
+    width:100%;
+    height:auto;
+}
+
+.prices{
+    background-image: url(../../media/parents.jpg); /*Image source: https://www.eventcinemas.com.au/Promotions/FamilySaver#cinemas=63*/
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-bottom-style: solid; 
+}
+
+.pricesGrid{
+    display:grid;
+    color: white;
+    grid-template-columns: 0.05fr 0.30fr 0.05fr 0.50fr 0.1fr;
+    grid-template-rows: 0.05fr 0.05fr 0.05fr 0.35fr 0.05fr 0.35fr 0.10fr;
+    text-align: center;
+    min-height:100vh;
+}
+
+.prices p{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.pricesGrid > button{
+    width:100%;
+    max-height: 100px;
+    min-width: 100px;
+    background-color: hsl(207, 100%, 60%);
+    border-radius: 10px;
+    border:none;
+    padding:0;
+}
+
+#sButton{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    
+}
+
+#pButton{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    
+}
+
+#tableDiv{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 7; 
+    background:rgba(255,255,255,0.5);
+    height:100%; 
+}
+
+#Swap{
+    display: none;
+}
+
+#Standard{
+    width:100%;
+    height:100%;
+    min-height: 100%;
+    color: black;
+    
+}
+
+#Premium{
+    width:100%;
+    height:100%;
+    color: black;
+    
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+  }
+
+.showing{
+    display: grid;
+    grid-template-columns: 0.01fr 0.47fr 0.04fr 0.47fr 0.01fr;
+    grid-template-rows: 0.01fr 0.47fr 0.04fr 0.47fr 0.01fr;
+    background-image: url(../../media/cinema.jpg);
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+.showing > div{
+    background:rgba(255,255,255,0.5);
+    display: grid;
+    grid-template-columns: 0.05fr 0.45fr 0.1fr 0.35fr 0.05fr;
+    grid-template-rows: 0.05fr 0.15fr 0.05fr 0.7fr 0.05fr;
+    max-width: 100vw;
+    border:solid;
+    border-color: black;
+}
+
+.ShowingOne{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.ShowingTwo{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.ShowingThree{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.ShowingFour{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.showing > div > img{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    width: 100%;
+    height: auto;
+}
+
+.showing > div > ul{
+    list-style-type: none;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.showing > div > h3{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end:6;
+    text-align: center;
+}
+.synopsis{
+    min-height:50vh;
+    box-sizing: border-box;
+    max-width: inherit;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+.synpanel{
+    display: grid;
+    min-height: 50vh;
+    grid-template-columns: 0.05fr 0.40fr 0.05fr 0.45fr 0.05fr;
+    grid-template-rows: repeat(3, 0.05fr) 0.60fr repeat(2, 0.05fr) 0.1fr 0.05fr;
+}
+
+.synpanel h3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    white-space: pre;
+    margin-left: 5px;
+}
+
+.synpanel p{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: justify;
+    white-space: pre-line;
+    margin-left: 5px;
+    margin: auto;
+}
+
+.buttongroup{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    display:flex;
+    flex-grow: 1;
+    align-items: center;
+    margin: auto;
+    
+}
+
+button{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    
+}
+
+.video_container{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    margin-left: 5px;
+    
+}
+
+iframe{
+  top:0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;  
+  border:solid;
+  border-color: black;
+}
+
+footer{
+    background-color: hsl(207, 100%, 60%);
+    padding: 5%;
+    text-align: justify;
+}
+
+/*Media Queries*/ 
+
+/*Made with reference to teh responsive html document supplied on the wp secured area site "https://titan.csit.rmit.edu.au/~e54061/wp/responsive.html"*/
+
+/*Mobile*/
+@media only screen and (max-width : 501px) {
+    .showing > div{
+        max-width:100vw;
+        height:50vh;
+    }
+    .showing > div > img{
+        width:50%;
+        height: auto;
+    }
+
+    .synopsis{
+        padding:5px;
+    }
+
+    .synopsis > div {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .synopsis > p{
+        text-align: center;
+    }
+
+    button{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/*Tablet and large mobile (smaller than 768px)*/
+@media only screen and (max-width : 769px) {
+    .showing{
+        display: inline-block;
+    }
+    .showing > div{
+        max-width:100vw;
+        height:50vh;
+    }
+    .showing > div > img {
+        width:75%;
+        height: auto;
+    }
+    .synopsis > div {
+        display: inline-block;
+        text-align: center;
+    }   
+    .synopsis > p{
+        text-align: center;
+    }
+
+    
+}
+
+
+
