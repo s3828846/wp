@@ -187,7 +187,7 @@
           </ul>
         </div>
       </article>
-      <article class="synopsis">
+      <section class="synopsis">
         <div class="synpanel">
           <h3>Star Wars: The Rise of Skywalker       M</h3>
           <p>The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.
@@ -208,7 +208,7 @@
             <button type="button">Sunday - 12pm</button>
           </div>
         </div>
-      </article>
+      </section>
     </main>
 
     <footer>
@@ -220,8 +220,8 @@
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
       
-      <script src="script.js"> </script>
+      
     </footer>
-
+    <script src="script.js"> </script>
   </body>
 </html>

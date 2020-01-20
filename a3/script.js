@@ -2,7 +2,22 @@
 
 
 window.onscroll = function() {
-    console.log("Win Y: " +window.scrollY);
+    //console.clear();
+    //console.log("Win Y: " +window.scrollY);
+    var navlinks = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
+    var articles = document.getElementsByTagName("main")[0].getElementsByTagName("article");
+    for(var i = 0;i<articles.length;i++) {
+        var articleTop = articles[i].offsetTop-1;
+        var articleBot = articles[i].offsetTop+articles[i].offsetHeight;
+        //console.log(articleTop+" "+articleBot);
+        if (window.scrollY >= articleTop && window.scrollY < articleBot) {
+            //console.log(articles[i].className+": current")
+            navlinks[i].classList.add("current");
+        } else {
+            //console.log(articles[i]+":");
+            navlinks[i].classList.remove("current");
+        }
+    }
 }
 
 var check = 1;

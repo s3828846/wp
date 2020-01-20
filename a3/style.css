@@ -62,11 +62,17 @@ nav{
     padding: 2px;
 }
 
-.nav-links a:hover{
+.nav-links a.current{
     color: black;
+    transition: 0.3s;
 }
 
 article { 
+    min-height:100vh;
+    box-sizing: border-box;
+}
+
+section {
     min-height:100vh;
     box-sizing: border-box;
 }
