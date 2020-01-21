@@ -210,7 +210,7 @@
         </div>
       </section>
       <section id="reserve-panels">
-        <div id="syn1">
+        <div id="syn1-ACT">
           <h3>Star Wars: The Rise of Skywalker       M</h3>
           <p>The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.
             Staring: Carrie Fisher, Mark Hamil, Adam Driver, Daisy Ridley, John Boyega, Oscar Issac Anthony Daniels and Naomi Ackie.
@@ -230,7 +230,7 @@
             <button type="button">Sunday - 12pm</button>
           </div>
         </div>
-        <div id="syn2">
+        <div id="syn2-ANM">
           <h3>Frozen 2       PG</h3>
           <p>From the Academy Award®-winning team—directors Jennifer Lee and Chris Buck, and producer Peter Del Vecho—and featuring the voices of Idina Menzel, Kristen Bell, Jonathan Groff and Josh Gad, and the music of Oscar®-winning songwriters Kristen Anderson-Lopez and Robert Lopez, Walt Disney Animation Studios’ “Frozen 2” opens in Australian cinemas November, 2019. 
           </p>
@@ -247,7 +247,7 @@
             <button type="button">Sunday - 6pm</button>
           </div>
         </div>
-        <div id="syn3">
+        <div id="syn3-RMC">
           <h3>The Aeronauts    PG</h3>
           <p>Balloon pilot Amelia Wren and scientist James Glaisher find themselves in an epic fight for survival while attempting to make discoveries in a gas balloon in the 1860s. 
           </p>
@@ -263,7 +263,7 @@
             <button type="button">Sunday - 3pm</button>
           </div>
         </div>
-        <div id="syn4">
+        <div id="syn4-AHF">
           <h3>JoJo Rabbit      PG</h3>
           <p>A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.
           </p>

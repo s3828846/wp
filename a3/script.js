@@ -36,16 +36,16 @@ function swapSynopsis(recieved) {
     switch(recieved){
         case 1:
             //temp = container.innerHTML;
-            container.innerHTML = document.getElementById("syn1").innerHTML;
+            container.innerHTML = document.getElementById("syn1-ACT").innerHTML;
             break;
         case 2:
-            container.innerHTML = document.getElementById("syn2").innerHTML;
+            container.innerHTML = document.getElementById("syn2-ANM").innerHTML;
             break;
         case 3:
-            container.innerHTML = document.getElementById("syn3").innerHTML;
+            container.innerHTML = document.getElementById("syn3-RMC").innerHTML;
             break;
         case 4:
-            container.innerHTML = document.getElementById("syn4").innerHTML;
+            container.innerHTML = document.getElementById("syn4-AHF").innerHTML;
             break;
     }
 }
