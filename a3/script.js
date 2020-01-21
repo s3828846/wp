@@ -29,3 +29,23 @@ function swapFunction(checkRecieve){
         check = checkRecieve;
     }           
 }
+var currentSyn;
+function swapSynopsis(recieved) {
+    var container = document.getElementById("synContiner");
+    var temp;
+    switch(recieved){
+        case 1:
+            //temp = container.innerHTML;
+            container.innerHTML = document.getElementById("syn1").innerHTML;
+            break;
+        case 2:
+            container.innerHTML = document.getElementById("syn2").innerHTML;
+            break;
+        case 3:
+            container.innerHTML = document.getElementById("syn3").innerHTML;
+            break;
+        case 4:
+            container.innerHTML = document.getElementById("syn4").innerHTML;
+            break;
+    }
+}
