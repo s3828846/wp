@@ -126,7 +126,7 @@
       </h2>
       <article class="showing">
         <a name="showing"></a>
-        <div class="ShowingOne" onclick="swapSynopsis(1)">
+        <div id="moviePanelACT" onclick="swapSynopsis(1)">
           <img src='../../media/skywalker.png' alt='Star Wars: Rise of Skywalker (Poster)'/>
           <h3>
             Star Wars:The Rise of Skywalker
@@ -141,7 +141,7 @@
             <li>Sunday - 12pm</li>
           </ul>
         </div>
-        <div class="ShowingTwo" onclick="swapSynopsis(2)">
+        <div id="moviePanelANM" onclick="swapSynopsis(2)">
           <img src='../../media/Frozen2.jpg' alt='Frozen 2 (Poster)'/>
           <h3>
             Frozen 2
@@ -156,7 +156,7 @@
             <li>Sunday    - 6pm</li>
           </ul>
         </div>
-        <div class="ShowingThree" onclick="swapSynopsis(3)">
+        <div id="moviePanelRMC" onclick="swapSynopsis(3)">
           <img src='../../media/aeronauts.jpg' alt='The Aeronauts (Poster)'/>
           <h3>
             The Aeronauts
@@ -171,7 +171,7 @@
             <li>Sunday - 3pm</li>
           </ul>
         </div>
-        <div class="ShowingFour" onclick="swapSynopsis(4)">
+        <div id="moviePanelAHF" onclick="swapSynopsis(4)">
           <img src='../../media/JoJO.jpg' alt='JoJo Rabbit (Poster)'/>
           <h3>
             JoJo Rabbit
@@ -210,7 +210,7 @@
         </div>
       </section>
       <section id="reserve-panels">
-        <div id="syn1-ACT">
+        <div id="synopsisACT">
           <h3>Star Wars: The Rise of Skywalker       M</h3>
           <p>The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.
             Staring: Carrie Fisher, Mark Hamil, Adam Driver, Daisy Ridley, John Boyega, Oscar Issac Anthony Daniels and Naomi Ackie.
@@ -230,7 +230,7 @@
             <button type="button">Sunday - 12pm</button>
           </div>
         </div>
-        <div id="syn2-ANM">
+        <div id="synopsisANM">
           <h3>Frozen 2       PG</h3>
           <p>From the Academy Award®-winning team—directors Jennifer Lee and Chris Buck, and producer Peter Del Vecho—and featuring the voices of Idina Menzel, Kristen Bell, Jonathan Groff and Josh Gad, and the music of Oscar®-winning songwriters Kristen Anderson-Lopez and Robert Lopez, Walt Disney Animation Studios’ “Frozen 2” opens in Australian cinemas November, 2019. 
           </p>
@@ -247,7 +247,7 @@
             <button type="button">Sunday - 6pm</button>
           </div>
         </div>
-        <div id="syn3-RMC">
+        <div id="synopsisRMC">
           <h3>The Aeronauts    PG</h3>
           <p>Balloon pilot Amelia Wren and scientist James Glaisher find themselves in an epic fight for survival while attempting to make discoveries in a gas balloon in the 1860s. 
           </p>
@@ -263,7 +263,7 @@
             <button type="button">Sunday - 3pm</button>
           </div>
         </div>
-        <div id="syn4-AHF">
+        <div id="synopsisAHF">
           <h3>JoJo Rabbit      PG</h3>
           <p>A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.
           </p>
@@ -280,6 +280,117 @@
             <button type="button">Sunday - 9pm</button>
           </div>
         </div>
+      </section>
+        <form action="/~e54061/wp/lunardo-formtest.php" method="post" target="_blank">
+          <input type="hidden" name="movie[id]" id="movie[id]" value="Title">
+          <input type="hidden" name="movie[day]" id="movie[day]" value="Day">
+          <input type="hidden" name="movie[hour]" id="movie[hour]" value="Hour">
+          <h2 id="movieInfo">Movie Title - Day - Time</h2>
+          <br>
+          <fieldset id="standardPrices-form">
+            <legend>Standard</legend>
+            <label for="seats[STA]">Adults:</label>
+            <select name=seats[STA] id="seats[STA]">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+            </select><br>
+            <label for="seats[STP]">Concession:</label>
+            <select name="seats[STP]" id="seats[STP]">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+            </select><br>
+            <label for="seats[STC]">Child:</label>
+            <select name="seats[STC]" id="seats[STC]">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+            </select>
+          </fieldset>
+          <fieldset id="firstClassPrices-form">
+            <legend>First Class</legend>
+            <label for="seats[FCA]">Adults</label>
+            <select name=seats[FCA] id="seats[FCA]">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+            </select><br>
+            <label for="seats[FCP]">Concession:</label>
+            <select name="seats[FCP]" id="seats[FCP]">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+            </select><br>
+            <label for="seats[FCC]">Child:</label>
+            <select name="seats[FCC]" id="seats[FCC]">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+            </select>
+          </fieldset>
+          <fieldset id="custInfo">
+            <legend>Customer</legend>
+            <label for="cust[name]">Name:</label>
+            <input type="text" name="cust[name]" id="cust[name]">
+            <br>
+            <label for="cust[email]">Email:</label>
+            <input type="email" name="cust[email]" id="cust[email]">
+            <br>
+            <label for="cust[mobile]">Mobile:</label>
+            <input type="tel" name="cust[mobile]" id="cust[mobile]">
+            <br>
+            <label for="cust[card]">Credit Card:</label>
+            <input type="text" name="cust[card]" id="cust[card]">
+            <br>
+            <label for="cust[expiry]">Name:</label>
+            <input type="month" name="cust[expiry]" id="cust[expiry]">
+          </fieldset>
+          <input type="submit" name="order" value="Order" id="orderButton">
+        </form>
+
     </main>
 
     <footer>
