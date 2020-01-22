@@ -126,6 +126,7 @@
       </h2>
       <article class="showing">
         <a name="showing"></a>
+        <a href="#synopsis-section"></a>
         <div id="moviePanelACT" onclick="swapSynopsis(1)">
           <img src='../../media/skywalker.png' alt='Star Wars: Rise of Skywalker (Poster)'/>
           <h3>
@@ -188,25 +189,8 @@
         </div>
       </article>
       <section class="synopsis" id="synFrame">
+        <a name="synopsis-section"></a>
         <div class="synpanel" id="synContiner">
-          <h3>Star Wars: The Rise of Skywalker       M</h3>
-          <p>The surviving Resistance faces the First Order once more in the final chapter of the Skywalker saga.
-             Staring: Carrie Fisher, Mark Hamil, Adam Driver, Daisy Ridley, John Boyega, Oscar Issac Anthony Daniels and Naomi Ackie.
-          </p>
-          <!--Synopsis is copied form the hoyts synopsis of the film, found here https://www.hoyts.com.au/movies/star-wars-the-rise-of-skywalker-->
-          <div class="video_container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8Qn_spdM5Zg" frameborder="0" allowfullscreen></iframe>
-          <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
-          </div>
-          <div class="buttongroup">
-            <button type="button">Monday - 12pm</button>
-            <button type="button">Tuesday - 12pm</button>
-            <button type="button">Wednesday - 6pm</button>
-            <button type="button">Thursday - 6pm</button>
-            <button type="button">Friday - 6pm</button>
-            <button type="button">Saturday - 12pm</button>
-            <button type="button">Sunday - 12pm</button>
-          </div>
         </div>
       </section>
       <section id="reserve-panels">
@@ -221,13 +205,13 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button">Monday - 12pm</button>
-            <button type="button">Tuesday - 12pm</button>
-            <button type="button">Wednesday - 6pm</button>
-            <button type="button">Thursday - 6pm</button>
-            <button type="button">Friday - 6pm</button>
-            <button type="button">Saturday - 12pm</button>
-            <button type="button">Sunday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Monday','12pm','ACT')>Monday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Tuesday','12pm','ACT')>Tuesday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Wednesday','6pm','ACT')>Wednesday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Thursday','6pm','ACT')>Thursday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Friday','6pm','ACT')>Friday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Saturday','12pm','ACT')>Saturday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Sunday','12pm','ACT')>Sunday - 12pm</button>
           </div>
         </div>
         <div id="synopsisANM">
@@ -240,11 +224,11 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button">Wednesday - 9pm</button>
-            <button type="button">Thursday - 9pm</button>
-            <button type="button">Friday - 9pm</button>
-            <button type="button">Saturday - 6pm</button>
-            <button type="button">Sunday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Wednesday','9pm','ANM')>Wednesday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Thursday','9pm','ANM')>Thursday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Friday','9pm','ANM')>Friday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Saturday','6pm','ANM')>Saturday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Sunday','6pm','ANM')>Sunday - 6pm</button>
           </div>
         </div>
         <div id="synopsisRMC">
@@ -257,10 +241,10 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button">Monday - 6pm</button>
-            <button type="button">Tuesday - 6pm</button>
-            <button type="button">Saturday - 3pm</button>
-            <button type="button">Sunday - 3pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Monday','6pm','RMC')>Monday - 6pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Tuesday','6pm','RMC')>Tuesday - 6pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Saturday','3pm','RMC')>Saturday - 3pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Sunday','3pm','RMC')>Sunday - 3pm</button>
           </div>
         </div>
         <div id="synopsisAHF">
@@ -273,15 +257,15 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button">Wednesday - 12pm</button>
-            <button type="button">Thursday - 12pm</button>
-            <button type="button">Friday - 12pm</button>
-            <button type="button">Saturday - 9pm</button>
-            <button type="button">Sunday - 9pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Wednesday','12pm','AHF')>Wednesday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Thursday','12pm','AHF')>Thursday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Friday','12pm','AHF')>Friday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Saturday','9pm','AHF')>Saturday - 9pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Sunday','9pm','AHF')>Sunday - 9pm</button>
           </div>
         </div>
       </section>
-        <form action="/~e54061/wp/lunardo-formtest.php" method="post" target="_blank">
+        <form action="/~e54061/wp/lunardo-formtest.php" method="post" target="_blank" id="booking-form">
           <input type="hidden" name="movie[id]" id="movie[id]" value="Title">
           <input type="hidden" name="movie[day]" id="movie[day]" value="Day">
           <input type="hidden" name="movie[hour]" id="movie[hour]" value="Hour">

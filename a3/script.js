@@ -32,10 +32,10 @@ function swapFunction(checkRecieve){
 var currentSyn;
 function swapSynopsis(recieved) {
     var container = document.getElementById("synContiner");
-    var temp;
+    document.getElementById("synFrame").style.display = "block";
+    
     switch(recieved){
         case 1:
-            //temp = container.innerHTML;
             container.innerHTML = document.getElementById("synopsisACT").innerHTML;
             break;
         case 2:
@@ -48,4 +48,12 @@ function swapSynopsis(recieved) {
             container.innerHTML = document.getElementById("synopsisAHF").innerHTML;
             break;
     }
+}
+
+function movieAssignment(title,day,hour,type) {
+    document.getElementById("movie[id]").value = type;
+    document.getElementById("movie[hour]").value = hour;
+    document.getElementById("movie[day]").value = day;
+    document.getElementById("movieInfo").innerHTML = title + " " + day + " " + hour;
+    document.getElementById("booking-form").style.display = "block";
 }

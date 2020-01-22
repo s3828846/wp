@@ -315,6 +315,7 @@ td, th {
     border-top-color: black;
     border-bottom-color: black;
     border-bottom-style: solid;
+    display: none;
 }
 .synpanel{
     display: grid;
@@ -386,6 +387,10 @@ footer{
     text-align: justify;
 }
 
+#booking-form{
+    display: none;
+}
+
 /*Media Queries*/ 
 
 /*Made with reference to teh responsive html document supplied on the wp secured area site "https://titan.csit.rmit.edu.au/~e54061/wp/responsive.html"*/
@@ -420,6 +425,8 @@ footer{
     }
 }
 
+
+
 /*Tablet and large mobile (smaller than 768px)*/
 @media only screen and (max-width : 769px) {
     .showing{
@@ -443,6 +450,8 @@ footer{
 
     
 }
+
+
 
 
 
