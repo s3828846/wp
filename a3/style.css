@@ -391,6 +391,10 @@ footer{
     display: none;
 }
 
+.error{
+    color: red;
+}
+
 /*Media Queries*/ 
 
 /*Made with reference to teh responsive html document supplied on the wp secured area site "https://titan.csit.rmit.edu.au/~e54061/wp/responsive.html"*/

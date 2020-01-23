@@ -126,7 +126,6 @@
       </h2>
       <article class="showing">
         <a name="showing"></a>
-        <a href="#synopsis-section"></a>
         <div id="moviePanelACT" onclick="swapSynopsis(1)">
           <img src='../../media/skywalker.png' alt='Star Wars: Rise of Skywalker (Poster)'/>
           <h3>
@@ -265,7 +264,7 @@
           </div>
         </div>
       </section>
-        <form action="/~e54061/wp/lunardo-formtest.php" method="post" target="_blank" id="booking-form">
+        <form action="/~e54061/wp/lunardo-formtest.php" method="post" target="_blank" id="booking-form" onsubmit="return formCheck();">
           <input type="hidden" name="movie[id]" id="movie[id]" value="Title">
           <input type="hidden" name="movie[day]" id="movie[day]" value="Day">
           <input type="hidden" name="movie[hour]" id="movie[hour]" value="Hour">
@@ -359,18 +358,23 @@
             <legend>Customer</legend>
             <label for="cust[name]">Name:</label>
             <input type="text" name="cust[name]" id="cust[name]">
+            <span class='error' id='nameError'></span>
             <br>
             <label for="cust[email]">Email:</label>
             <input type="email" name="cust[email]" id="cust[email]">
+            <span class='error' id='nameError'></span>
             <br>
             <label for="cust[mobile]">Mobile:</label>
             <input type="tel" name="cust[mobile]" id="cust[mobile]">
+            <span class='error' id='nameError'></span>
             <br>
             <label for="cust[card]">Credit Card:</label>
             <input type="text" name="cust[card]" id="cust[card]">
+            <span class='error' id='nameError'></span>
             <br>
             <label for="cust[expiry]">Name:</label>
             <input type="month" name="cust[expiry]" id="cust[expiry]">
+            <span class='error' id='nameError'></span>
           </fieldset>
           <input type="submit" name="order" value="Order" id="orderButton">
         </form>

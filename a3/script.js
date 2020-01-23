@@ -33,7 +33,7 @@ var currentSyn;
 function swapSynopsis(recieved) {
     var container = document.getElementById("synContiner");
     document.getElementById("synFrame").style.display = "block";
-    
+    container.scrollIntoView();
     switch(recieved){
         case 1:
             container.innerHTML = document.getElementById("synopsisACT").innerHTML;
@@ -56,4 +56,31 @@ function movieAssignment(title,day,hour,type) {
     document.getElementById("movie[day]").value = day;
     document.getElementById("movieInfo").innerHTML = title + " " + day + " " + hour;
     document.getElementById("booking-form").style.display = "block";
+    var movieOrder = document.getElementById("booking-form").scrollIntoView(true)
+}
+
+function clearError(){
+    var errors = document.getElementsByClassName("error");
+    for(var i = 0;i<errors.length;i++){
+        errors[i].innerHTML = "";
+    }
+}
+
+function checkName() {
+    var name = document.getElementById("cust[name]").value;
+    var patt = /^[A-Za-z\-\' ]+$/;
+    if(patt.test(name)) {
+        console.log("true");
+        return true;  
+    }
+    else {
+        console.log("false");
+        return false;
+        
+    }
+}
+
+function formCheck() {
+    checkName();
+    return (false);
 }
