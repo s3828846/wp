@@ -150,7 +150,7 @@ function checkName() {
         return true;  
     }
     else {
-        document.getElementById("finalError").innerHTML = "Ensure that all customer information is filled out and matches the example format"
+        document.getElementById("finalError").innerHTML = "Ensure all fields are Correct"
         document.getElementById("cust[name]").classList.add("errorField");
         totalErrors++;
         return false;
@@ -165,7 +165,7 @@ function checkMobile() {
         return true;
     }
     else {
-        document.getElementById("finalError").innerHTML = "Ensure that all customer information is filled out and matches the example format"
+        document.getElementById("finalError").innerHTML = "Ensure all fields are Correct"
         document.getElementById("cust[mobile]").classList.add("errorField");
         totalErrors++;
         return false;
@@ -179,7 +179,7 @@ function checkCard() {
         return true;
     }
     else {
-        document.getElementById("finalError").innerHTML = "Ensure that all customer information is filled out and matches the example format"
+        document.getElementById("finalError").innerHTML = "Ensure all fields are Correct"
         document.getElementById("cust[card]").classList.add("errorField");
         totalErrors++;
         return false;
@@ -195,7 +195,7 @@ function checkMail() {
         return true;
     }
     else {
-        document.getElementById("finalError").innerHTML = "Ensure that all customer information is filled out and matches the example format"
+        document.getElementById("finalError").innerHTML = "Ensure all fields are Correct"
         document.getElementById("cust[email]").classList.add("errorField");
         totalErrors++;
         return false;
@@ -221,7 +221,7 @@ function checkMonth() {
         }
     }
     else {
-        document.getElementById("expiryError").innerHTML = "Please input a valid date in the format YYYY-MM";
+        document.getElementById("expiryError").innerHTML = "Input date in the form YYYY-MM";
         document.getElementById("cust[expiry]").classList.add("errorField");
         totalErrors++;
         return false;
