@@ -39,7 +39,7 @@ window.onscroll = function() {
     var navlinks = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
     var articles = document.getElementsByTagName("main")[0].getElementsByTagName("article");
     for(var i = 0;i<articles.length;i++) {
-        var articleTop = articles[i].offsetTop-1;
+        var articleTop = articles[i].offsetTop-20;
         var articleBot = articles[i].offsetTop+articles[i].offsetHeight;
         if (window.scrollY >= articleTop && window.scrollY < articleBot) {
             navlinks[i].classList.add("current");
@@ -121,7 +121,7 @@ function updatePrice(){
     totalPrice += (document.getElementById("seats[FCP]").value * FCP);
     totalPrice += (document.getElementById("seats[FCC]").value * FCC);
     fixedPrice = totalPrice.toFixed(2);
-    document.getElementById("price").innerHTML = "$ " + fixedPrice;
+    document.getElementById("orderPrice").innerHTML = "$ " + fixedPrice;
 }
 
 var totalErrors = 0;

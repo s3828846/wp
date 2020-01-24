@@ -373,8 +373,8 @@
             <input type="month" name="cust[expiry]" id="cust[expiry]" placeholder="YYYY-MM" min>
             <span class='error' id='finalError'></span>
           </fieldset>
-          <label for="price" id="total">Total:</label> 
-          <span name="price" id="price"></span>
+          <label for="orderPrice" id="total">Total:</label> 
+          <span name="orderPrice" id="orderPrice"></span>
           <input type="submit" name="order" value="Order" id="orderButton">
         </form>
 
