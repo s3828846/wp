@@ -204,13 +204,13 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Monday','12pm','ACT')>Monday - 12pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Tuesday','12pm','ACT')>Tuesday - 12pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Wednesday','6pm','ACT')>Wednesday - 6pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Thursday','6pm','ACT')>Thursday - 6pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Friday','6pm','ACT')>Friday - 6pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Saturday','12pm','ACT')>Saturday - 12pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Sunday','12pm','ACT')>Sunday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Monday','12pm','ACT',1)>Monday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Tuesday','12pm','ACT',1)>Tuesday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Wednesday','6pm','ACT',2)>Wednesday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Thursday','6pm','ACT',2)>Thursday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Friday','6pm','ACT',2)>Friday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Saturday','12pm','ACT',2)>Saturday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Sunday','12pm','ACT',2)>Sunday - 12pm</button>
           </div>
         </div>
         <div id="synopsisANM">
@@ -223,11 +223,11 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button" onclick=movieAssignment('Frozen\t2','Wednesday','9pm','ANM')>Wednesday - 9pm</button>
-            <button type="button" onclick=movieAssignment('Frozen\t2','Thursday','9pm','ANM')>Thursday - 9pm</button>
-            <button type="button" onclick=movieAssignment('Frozen\t2','Friday','9pm','ANM')>Friday - 9pm</button>
-            <button type="button" onclick=movieAssignment('Frozen\t2','Saturday','6pm','ANM')>Saturday - 6pm</button>
-            <button type="button" onclick=movieAssignment('Frozen\t2','Sunday','6pm','ANM')>Sunday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Wednesday','9pm','ANM',2)>Wednesday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Thursday','9pm','ANM',2)>Thursday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Friday','9pm','ANM',2)>Friday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Saturday','6pm','ANM',2)>Saturday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Sunday','6pm','ANM',2)>Sunday - 6pm</button>
           </div>
         </div>
         <div id="synopsisRMC">
@@ -240,10 +240,10 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button" onclick=movieAssignment('The\tAeronauts','Monday','6pm','RMC')>Monday - 6pm</button>
-            <button type="button" onclick=movieAssignment('The\tAeronauts','Tuesday','6pm','RMC')>Tuesday - 6pm</button>
-            <button type="button" onclick=movieAssignment('The\tAeronauts','Saturday','3pm','RMC')>Saturday - 3pm</button>
-            <button type="button" onclick=movieAssignment('The\tAeronauts','Sunday','3pm','RMC')>Sunday - 3pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Monday','6pm','RMC',1)>Monday - 6pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Tuesday','6pm','RMC',1)>Tuesday - 6pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Saturday','3pm','RMC',2)>Saturday - 3pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Sunday','3pm','RMC',2)>Sunday - 3pm</button>
           </div>
         </div>
         <div id="synopsisAHF">
@@ -256,11 +256,11 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Wednesday','12pm','AHF')>Wednesday - 12pm</button>
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Thursday','12pm','AHF')>Thursday - 12pm</button>
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Friday','12pm','AHF')>Friday - 12pm</button>
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Saturday','9pm','AHF')>Saturday - 9pm</button>
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Sunday','9pm','AHF')>Sunday - 9pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Wednesday','12pm','AHF',1)>Wednesday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Thursday','12pm','AHF',1)>Thursday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Friday','12pm','AHF',1)>Friday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Saturday','9pm','AHF',2)>Saturday - 9pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Sunday','9pm','AHF',2)>Sunday - 9pm</button>
           </div>
         </div>
       </section>
@@ -273,8 +273,8 @@
           <br>
           <fieldset id="standardPrices-form">
             <legend>Standard</legend>
-            <label for="seats[STA]">Adults:</label>
-            <select name=seats[STA] id="seats[STA]">
+            <label for="seats[STA]">Adults:
+            <select name=seats[STA] id="seats[STA]" onclick=updatePrice()>
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -285,9 +285,9 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select><br>
-            <label for="seats[STP]">Concession:</label>
-            <select name="seats[STP]" id="seats[STP]">
+            </select></label><br>
+            <label for="seats[STP]">Concession:
+            <select name="seats[STP]" id="seats[STP]" onclick=updatePrice()>
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -298,9 +298,9 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select><br>
-            <label for="seats[STC]">Child:</label>
-            <select name="seats[STC]" id="seats[STC]">
+            </select></label><br>
+            <label for="seats[STC]">Child:
+            <select name="seats[STC]" id="seats[STC]" onclick=updatePrice()>
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -311,12 +311,12 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select>
+            </select></label>
           </fieldset>
           <fieldset id="firstClassPrices-form">
             <legend>First Class</legend>
-            <label for="seats[FCA]">Adults</label>
-            <select name=seats[FCA] id="seats[FCA]">
+            <label for="seats[FCA]">Adults
+            <select name=seats[FCA] id="seats[FCA]" onclick=updatePrice()>
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -327,9 +327,9 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select><br>
-            <label for="seats[FCP]">Concession:</label>
-            <select name="seats[FCP]" id="seats[FCP]">
+            </select></label><br>
+            <label for="seats[FCP]">Concession:
+            <select name="seats[FCP]" id="seats[FCP]" onclick=updatePrice()>
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -340,9 +340,9 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select><br>
-            <label for="seats[FCC]">Child:</label>
-            <select name="seats[FCC]" id="seats[FCC]">
+            </select></label><br>
+            <label for="seats[FCC]">Child:
+            <select name="seats[FCC]" id="seats[FCC]" onclick=updatePrice()>
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -353,32 +353,32 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select>
+            </select></label>
           </fieldset>
           <fieldset id="custInfo">
             <legend>Customer</legend>
-            <label for="cust[name]">Name:</label>
-            <input type="text" name="cust[name]" id="cust[name]" placeholder="Your Name">
+            <label for="cust[name]">Name:
+            <input type="text" name="cust[name]" id="cust[name]" placeholder="Your Name"></label>
             <span class='error' id='nameError'></span>
             <br>
-            <label for="cust[email]">Email:</label>
-            <input type="email" name="cust[email]" id="cust[email]" placeholder="example@server.com">
+            <label for="cust[email]">Email:
+            <input type="email" name="cust[email]" id="cust[email]" placeholder="example@server.com"></label>
             <span class='error' id='emailError'></span>
             <br>
-            <label for="cust[mobile]">Mobile:</label>
-            <input type="tel" name="cust[mobile]" id="cust[mobile]" placeholder="04 12345678">
+            <label for="cust[mobile]">Mobile:
+            <input type="tel" name="cust[mobile]" id="cust[mobile]" placeholder="04 12345678"></label>
             <span class='error' id='telError'></span>
             <br>
-            <label for="cust[card]">Credit Card:</label>
-            <input type="text" name="cust[card]" id="cust[card]" placeholder="1234 5678 8101 1121">
+            <label for="cust[card]">Credit Card:
+            <input type="text" name="cust[card]" id="cust[card]" placeholder="1234 5678 8101 1121"></label>
             <span class='error' id='cardError'></span>
             <br>
-            <label for="cust[expiry]">Expiry:</label>
-            <input type="month" name="cust[expiry]" id="cust[expiry]" placeholder="YYYY-MM" min>
+            <label for="cust[expiry]">Expiry:
+            <input type="month" name="cust[expiry]" id="cust[expiry]" placeholder="YYYY-MM" min></label>
             <span class='error' id='expiryError'></span>
           </fieldset>
-          <label for="price">Total $</label>
-          <span name="price" id="price"></span> 
+          <label for="price">Total $
+          <span name="price" id="price"></span></label> 
           <input type="submit" name="order" value="Order" id="orderButton">
         </form>
 

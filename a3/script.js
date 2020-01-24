@@ -1,6 +1,6 @@
 /* Insert your javascript here */
 
-var movieObject = {
+/*var movieObject = {
     ACT: {
         Mon:    "Star Wars: The Rise of Skywalker - Monday - 12pm",
         Tue:    "Star Wars: The Rise of Skywalker - Tuesday - 12pm",
@@ -30,7 +30,7 @@ var movieObject = {
         Sat: "JoJo Rabbit - Saturday - 9pm",
         Wed: "JoJo Rabbit - Sunday - 9pm",
     }
-}
+}*/
 
 var priceObject = {
     Std: {
@@ -59,13 +59,13 @@ var priceObject = {
     }
 }
 
-var sadu
-var scon
-var schi
-var padu
-var pcon
-var pchi
-
+var STA;
+var STP;
+var STC;
+var FCA;
+var FCP;
+var FCC;
+var totalPrice;
 
 
 
@@ -118,14 +118,49 @@ function swapSynopsis(recieved) {
     }
 }
 
-function movieAssignment(title,day,hour,type) {
+function movieAssignment(title,day,hour,type,priceGuide) {
     document.getElementById("movie[id]").value = type;
     document.getElementById("movie[hour]").value = hour;
     document.getElementById("movie[day]").value = day;
     document.getElementById("movieInfo").innerHTML = title + " " + day + " " + hour;
     document.getElementById("booking-form").style.display = "block";
     document.getElementById("cust[expiry]").min = new Date();
+    setPrice(priceGuide);
+    updatePrice()
     var movieOrder = document.getElementById("booking-form").scrollIntoView(true)
+}
+
+function setPrice(priceGuide){
+    totalPrice = 0;
+    if(priceGuide == 1){
+        STA = priceObject["Std"]["One"]["adu"];
+        STP = priceObject["Std"]["One"]["con"];
+        STC = priceObject["Std"]["One"]["chi"];
+        FCA = priceObject["Pre"]["One"]["adu"];
+        FCP = priceObject["Pre"]["One"]["con"];
+        FCC = priceObject["Pre"]["One"]["chi"];
+    }
+    if(priceGuide == 2){
+        STA = priceObject["Std"]["Two"]["adu"];
+        STP = priceObject["Std"]["Two"]["con"];
+        STC = priceObject["Std"]["Two"]["chi"];
+        FCA = priceObject["Pre"]["Two"]["adu"];
+        FCP = priceObject["Pre"]["Two"]["con"];
+        FCC = priceObject["Pre"]["Two"]["chi"];
+    }
+}
+
+function updatePrice(){
+    var fixedPrice;
+    totalPrice = 0;
+    totalPrice += (document.getElementById("seats[STA]").value * STA);
+    totalPrice += (document.getElementById("seats[STP]").value * STP);
+    totalPrice += (document.getElementById("seats[STC]").value * STC);
+    totalPrice += (document.getElementById("seats[FCA]").value * FCA);
+    totalPrice += (document.getElementById("seats[FCP]").value * FCP);
+    totalPrice += (document.getElementById("seats[FCC]").value * FCC);
+    fixedPrice = totalPrice.toFixed(2);
+    document.getElementById("price").innerHTML = fixedPrice;
 }
 
 var totalErrors = 0;
