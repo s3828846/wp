@@ -270,11 +270,10 @@
           <input type="hidden" name="movie[hour]" id="movie[hour]" value="Hour">
           <h2 id="movieInfo">Movie Title - Day - Time</h2>
           <span class='error' id='ticketError'></span>
-          <br>
-          <fieldset id="standardPrices-form">
+          <fieldset id="standardPrices-form" class="fieldset">
             <legend>Standard</legend>
-            <label for="seats[STA]">Adults:
-            <select name=seats[STA] id="seats[STA]" onclick=updatePrice()>
+            <label for="seats[STA]" class="sSTA">Adults:</label>
+            <select name=seats[STA] id="seats[STA]" onclick=updatePrice() class="gSTA">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -285,9 +284,9 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select></label><br>
-            <label for="seats[STP]">Concession:
-            <select name="seats[STP]" id="seats[STP]" onclick=updatePrice()>
+            </select>
+            <label for="seats[STP]" class="sSTP">Concession:</label>
+            <select name="seats[STP]" id="seats[STP]" onclick=updatePrice() class="gSTP">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -298,9 +297,9 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select></label><br>
-            <label for="seats[STC]">Child:
-            <select name="seats[STC]" id="seats[STC]" onclick=updatePrice()>
+            </select>
+            <label for="seats[STC]" class=sSTC>Child:</label>
+            <select name="seats[STC]" id="seats[STC]" onclick=updatePrice() class="gSTC">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -311,12 +310,12 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select></label>
+            </select>
           </fieldset>
-          <fieldset id="firstClassPrices-form">
+          <fieldset id="firstClassPrices-form" class="fieldset">
             <legend>First Class</legend>
-            <label for="seats[FCA]">Adults
-            <select name=seats[FCA] id="seats[FCA]" onclick=updatePrice()>
+            <label for="seats[FCA]" class="sSTA">Adults</label>
+            <select name=seats[FCA] id="seats[FCA]" onclick=updatePrice() class="gSTA">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -327,9 +326,9 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select></label><br>
-            <label for="seats[FCP]">Concession:
-            <select name="seats[FCP]" id="seats[FCP]" onclick=updatePrice()>
+            </select>
+            <label for="seats[FCP]" class=sSTP>Concession:</label>
+            <select name="seats[FCP]" id="seats[FCP]" onclick=updatePrice() class="gSTP">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -340,9 +339,9 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select></label><br>
-            <label for="seats[FCC]">Child:
-            <select name="seats[FCC]" id="seats[FCC]" onclick=updatePrice()>
+            </select>
+            <label for="seats[FCC]" class="sSTC">Child:</label>
+            <select name="seats[FCC]" id="seats[FCC]" onclick=updatePrice() class="gSTC">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -353,32 +352,29 @@
               <option value=7>7</option>
               <option value=8>8</option>
               <option value=9>9</option>
-            </select></label>
+            </select>
           </fieldset>
-          <fieldset id="custInfo">
+          <fieldset id="custInfo" class="fieldset">
             <legend>Customer</legend>
-            <label for="cust[name]">Name:
-            <input type="text" name="cust[name]" id="cust[name]" placeholder="Your Name"></label>
+            <label for="cust[name]" id="nameId">Name:</label>
+            <input type="text" name="cust[name]" id="cust[name]" placeholder="First Last">
             <span class='error' id='nameError'></span>
-            <br>
-            <label for="cust[email]">Email:
-            <input type="email" name="cust[email]" id="cust[email]" placeholder="example@server.com"></label>
+            <label for="cust[email]" id="emailId">Email:</label>
+            <input type="email" name="cust[email]" id="cust[email]" placeholder="example@server.com">
             <span class='error' id='emailError'></span>
-            <br>
-            <label for="cust[mobile]">Mobile:
-            <input type="tel" name="cust[mobile]" id="cust[mobile]" placeholder="04 12345678"></label>
+            <label for="cust[mobile]" id="mobileId">Mobile:</label>
+            <input type="tel" name="cust[mobile]" id="cust[mobile]" placeholder="04 12345678">
             <span class='error' id='telError'></span>
-            <br>
-            <label for="cust[card]">Credit Card:
+            <label for="cust[card]" id="cardId">Credit Card:</label>
             <input type="text" name="cust[card]" id="cust[card]" placeholder="1234 5678 8101 1121"></label>
-            <span class='error' id='cardError'></span>
-            <br>
-            <label for="cust[expiry]">Expiry:
-            <input type="month" name="cust[expiry]" id="cust[expiry]" placeholder="YYYY-MM" min></label>
+            
             <span class='error' id='expiryError'></span>
+            <label for="cust[expiry]" id="expiryId">Expiry:</label>
+            <input type="month" name="cust[expiry]" id="cust[expiry]" placeholder="YYYY-MM" min>
+            <span class='error' id='finalError'></span>
           </fieldset>
-          <label for="price">Total $
-          <span name="price" id="price"></span></label> 
+          <label for="price" id="total">Total:</label> 
+          <span name="price" id="price"></span>
           <input type="submit" name="order" value="Order" id="orderButton">
         </form>
 

@@ -389,11 +389,254 @@ footer{
 
 #booking-form{
     display: none;
+    grid-template-columns: 0.05fr 0.40fr 0.10fr 0.30fr 0.10fr 0.05fr;
+    grid-template-rows: repeat(3, 0.05fr) 0.30fr 0.10fr 0.30fr 0.1fr 0.05fr;
+    min-height: 40vh;
 }
 
 .error{
     color: red;
+    font-size:12px;
 }
+
+.errorField{
+    background-color: rgba(255, 0, 0, 0.521);
+}
+
+.fieldset{	
+    border-radius:8px;	
+}
+
+.ticketSet {
+    border-color:red;
+}
+
+#standardPrices-form {
+    padding:5px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 0.05fr 0.40fr 0.1fr 0.40fr 0.10fr;
+    grid-template-rows: 0.10fr 0.20fr 0.10fr 0.20fr 0.10fr 0.20fr 0.10fr;
+}
+
+#firstClassPrices-form {
+    padding:5px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    display:grid;
+    grid-template-columns: 0.05fr 0.40fr 0.1fr 0.40fr 0.10fr;
+    grid-template-rows: 0.10fr 0.20fr 0.10fr 0.20fr 0.10fr 0.20fr 0.10fr;
+}
+
+#movieInfo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3; 
+}
+
+#custInfo {
+    padding:5px;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    display:grid;
+    grid-template-columns: 0.05fr 0.4fr 0.1fr 0.4fr 0.05fr;
+    grid-template-rows: 0.1fr 0.08fr 0.08fr 0.08fr 0.08fr 0.08fr 0.08fr 0.08fr 0.08fr 0.1fr;
+}
+
+#total {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+#price {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    text-align: right;
+}
+
+#orderButton {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    margin-left: 5px;
+}
+
+#seats[STA] {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.sSTA {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.sSTP {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.sSTC {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.gSTA {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.gSTP {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.gSTC {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+#ticketError {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+}
+ 
+#nameId {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#nameError {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#emailId {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#emailError {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+#mobileId {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+#telError {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+#cardId {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+#expiryError {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+#expiryId {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+
+#finalError {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+
+#cust\[name\] {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#cust\[email\] {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#cust\[mobile\] {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+#cust\[card\] {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+#cust\[expiry\] {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+
+
 
 /*Media Queries*/ 
 
@@ -428,8 +671,6 @@ footer{
         margin-right: 5px;
     }
 }
-
-
 
 /*Tablet and large mobile (smaller than 768px)*/
 @media only screen and (max-width : 769px) {

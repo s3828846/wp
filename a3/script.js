@@ -1,36 +1,12 @@
-/* Insert your javascript here */
-
-/*var movieObject = {
-    ACT: {
-        Mon:    "Star Wars: The Rise of Skywalker - Monday - 12pm",
-        Tue:    "Star Wars: The Rise of Skywalker - Tuesday - 12pm",
-        Wed:    "Star Wars: The Rise of Skywalker - Wednesday - 6pm",
-        Thu:    "Star Wars: The Rise of Skywalker - Thursday - 6pm",
-        Fri:    "Star Wars: The Rise of Skywalker - Friday - 6pm",
-        Sat:    "Star Wars: The Rise of Skywalker - Saturday - 12pm",
-        Sun:    "Star Wars: The Rise of Skywalker - Sunday - 12pm"
-    },
-    ANM: {
-        Wed: "Frozen 2 - Wednesday - 9pm",
-        Thu: "Frozen 2 - Thursday - 9pm",
-        Fri: "Frozen 2 - Friday - 9pm",
-        Sat: "Frozen 2 - Saturday - 6pm",
-        Sun: "Frozen 2 - Sunday - 6pm"
-    },
-    RMC: {
-        Mon: "The Aeronauts - Monday - 6pm",
-        Tue: "The Aeronauts - Tuesday - 6pm",
-        Sat: "The Aeronauts - Saturday - 3pm",
-        Sun: "The Aeronauts - Sunday - 3pm",
-    },
-    AHF: {
-        Wed: "JoJo Rabbit - Wednesday - 12pm",
-        Thu: "JoJo Rabbit - Thursday - 12pm",
-        Fri: "JoJo Rabbit - Friday - 12pm",
-        Sat: "JoJo Rabbit - Saturday - 9pm",
-        Wed: "JoJo Rabbit - Sunday - 9pm",
-    }
-}*/
+//global variables
+var STA;
+var STP;
+var STC;
+var FCA;
+var FCP;
+var FCC;
+var totalPrice;
+var check = 1;
 
 var priceObject = {
     Std: {
@@ -59,36 +35,21 @@ var priceObject = {
     }
 }
 
-var STA;
-var STP;
-var STC;
-var FCA;
-var FCP;
-var FCC;
-var totalPrice;
-
-
-
 window.onscroll = function() {
-    //console.clear();
-    //console.log("Win Y: " +window.scrollY);
     var navlinks = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
     var articles = document.getElementsByTagName("main")[0].getElementsByTagName("article");
     for(var i = 0;i<articles.length;i++) {
         var articleTop = articles[i].offsetTop-1;
         var articleBot = articles[i].offsetTop+articles[i].offsetHeight;
-        //console.log(articleTop+" "+articleBot);
         if (window.scrollY >= articleTop && window.scrollY < articleBot) {
-            //console.log(articles[i].className+": current")
             navlinks[i].classList.add("current");
         } else {
-            //console.log(articles[i]+":");
             navlinks[i].classList.remove("current");
         }
     }
 }
 
-var check = 1;
+
 function swapFunction(checkRecieve){  
     if(check != checkRecieve) {
         var x =  document.getElementById("tableDiv").innerHTML;
@@ -123,7 +84,7 @@ function movieAssignment(title,day,hour,type,priceGuide) {
     document.getElementById("movie[hour]").value = hour;
     document.getElementById("movie[day]").value = day;
     document.getElementById("movieInfo").innerHTML = title + " " + day + " " + hour;
-    document.getElementById("booking-form").style.display = "block";
+    document.getElementById("booking-form").style.display = "grid";
     document.getElementById("cust[expiry]").min = new Date();
     setPrice(priceGuide);
     updatePrice()
@@ -160,7 +121,7 @@ function updatePrice(){
     totalPrice += (document.getElementById("seats[FCP]").value * FCP);
     totalPrice += (document.getElementById("seats[FCC]").value * FCC);
     fixedPrice = totalPrice.toFixed(2);
-    document.getElementById("price").innerHTML = fixedPrice;
+    document.getElementById("price").innerHTML = "$ " + fixedPrice;
 }
 
 var totalErrors = 0;
@@ -168,6 +129,13 @@ var totalTickets = 0;
 
 function clearError(){
     var errors = document.getElementsByClassName("error");
+    document.getElementById("standardPrices-form").classList.remove("ticketSet");
+    document.getElementById("firstClassPrices-form").classList.remove("ticketSet");
+    document.getElementById("cust[name]").classList.remove("errorField");
+    document.getElementById("cust[email]").classList.remove("errorField");
+    document.getElementById("cust[card]").classList.remove("errorField");
+    document.getElementById("cust[expiry]").classList.remove("errorField");
+    document.getElementById("cust[mobile]").classList.remove("errorField");
     for(var i = 0;i<errors.length;i++){
         errors[i].innerHTML = "";
     }
@@ -182,8 +150,9 @@ function checkName() {
         return true;  
     }
     else {
+        document.getElementById("finalError").innerHTML = "Ensure that all customer information is filled out and matches the example format"
+        document.getElementById("cust[name]").classList.add("errorField");
         totalErrors++;
-        document.getElementById("nameError").innerHTML = "<br>Please input a valid name";
         return false;
         
     }
@@ -196,8 +165,9 @@ function checkMobile() {
         return true;
     }
     else {
+        document.getElementById("finalError").innerHTML = "Ensure that all customer information is filled out and matches the example format"
+        document.getElementById("cust[mobile]").classList.add("errorField");
         totalErrors++;
-        document.getElementById("telError").innerHTML = "<br>Please input a valid mobile number";
         return false;
     }
 }
@@ -209,9 +179,9 @@ function checkCard() {
         return true;
     }
     else {
-        
+        document.getElementById("finalError").innerHTML = "Ensure that all customer information is filled out and matches the example format"
+        document.getElementById("cust[card]").classList.add("errorField");
         totalErrors++;
-        document.getElementById("cardError").innerHTML = "<br>Please input a valid card";
         return false;
     }
 }
@@ -225,8 +195,9 @@ function checkMail() {
         return true;
     }
     else {
+        document.getElementById("finalError").innerHTML = "Ensure that all customer information is filled out and matches the example format"
+        document.getElementById("cust[email]").classList.add("errorField");
         totalErrors++;
-        document.getElementById("emailError").innerHTML = "<br>Please input a valid email";
         return false;
     }
 }
@@ -237,10 +208,11 @@ function checkMonth() {
     var d = new Date();
     var current = new Date(d.getFullYear(),d.getMonth());
     var sup = new Date(fromForm);
-    var altered = new Date(sup.getFullYear(),sup.getMonth());
+    var altered = new Date(sup.getFullYear(),sup.getMonth());  //alterted supplied date to ensure that the time of the submitted date does not effect the comparison
     if(patt.test(fromForm)){
         if(altered.getTime() <= current.getTime()){
-            document.getElementById("expiryError").innerHTML = "<br>The input date has expired"
+            document.getElementById("expiryError").innerHTML = "The input date has expired"
+            document.getElementById("cust[expiry]").classList.add("errorField");
             totalErrors++;
             return false;
         }
@@ -249,7 +221,8 @@ function checkMonth() {
         }
     }
     else {
-        document.getElementById("expiryError").innerHTML = "<br>Please input a valid date in the format YYYY-MM";
+        document.getElementById("expiryError").innerHTML = "Please input a valid date in the format YYYY-MM";
+        document.getElementById("cust[expiry]").classList.add("errorField");
         totalErrors++;
         return false;
     }
@@ -264,7 +237,9 @@ function checkTickets() {
     totalTickets += document.getElementById("seats[FCC]").value;
     if(totalTickets<=0)
     {
-        document.getElementById("ticketError").innerHTML = "<br>Please select at least one ticket";
+        document.getElementById("ticketError").innerHTML = "Please select at least one ticket";
+        document.getElementById("standardPrices-form").classList.add("ticketSet");
+        document.getElementById("firstClassPrices-form").classList.add("ticketSet");
         totalErrors++;
         return false;
     }
