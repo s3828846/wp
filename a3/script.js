@@ -1,5 +1,73 @@
 /* Insert your javascript here */
 
+var movieObject = {
+    ACT: {
+        Mon:    "Star Wars: The Rise of Skywalker - Monday - 12pm",
+        Tue:    "Star Wars: The Rise of Skywalker - Tuesday - 12pm",
+        Wed:    "Star Wars: The Rise of Skywalker - Wednesday - 6pm",
+        Thu:    "Star Wars: The Rise of Skywalker - Thursday - 6pm",
+        Fri:    "Star Wars: The Rise of Skywalker - Friday - 6pm",
+        Sat:    "Star Wars: The Rise of Skywalker - Saturday - 12pm",
+        Sun:    "Star Wars: The Rise of Skywalker - Sunday - 12pm"
+    },
+    ANM: {
+        Wed: "Frozen 2 - Wednesday - 9pm",
+        Thu: "Frozen 2 - Thursday - 9pm",
+        Fri: "Frozen 2 - Friday - 9pm",
+        Sat: "Frozen 2 - Saturday - 6pm",
+        Sun: "Frozen 2 - Sunday - 6pm"
+    },
+    RMC: {
+        Mon: "The Aeronauts - Monday - 6pm",
+        Tue: "The Aeronauts - Tuesday - 6pm",
+        Sat: "The Aeronauts - Saturday - 3pm",
+        Sun: "The Aeronauts - Sunday - 3pm",
+    },
+    AHF: {
+        Wed: "JoJo Rabbit - Wednesday - 12pm",
+        Thu: "JoJo Rabbit - Thursday - 12pm",
+        Fri: "JoJo Rabbit - Friday - 12pm",
+        Sat: "JoJo Rabbit - Saturday - 9pm",
+        Wed: "JoJo Rabbit - Sunday - 9pm",
+    }
+}
+
+var priceObject = {
+    Std: {
+        One: {
+            adu: "15.00",
+            con: "13.00",
+            chi: "11.00"
+        },
+        Two: {
+            adu: "20.50",
+            con: "18.00",
+            chi: "15.50"
+        }
+    },
+    Pre: {
+        One: {
+            adu: "25.00",
+            con: "23.00",
+            chi: "21.00"
+        },
+        Two: {
+            adu: "30.00",
+            con: "27.50",
+            chi: "25.00"
+        }
+    }
+}
+
+var sadu
+var scon
+var schi
+var padu
+var pcon
+var pchi
+
+
+
 
 window.onscroll = function() {
     //console.clear();
@@ -56,31 +124,127 @@ function movieAssignment(title,day,hour,type) {
     document.getElementById("movie[day]").value = day;
     document.getElementById("movieInfo").innerHTML = title + " " + day + " " + hour;
     document.getElementById("booking-form").style.display = "block";
+    document.getElementById("cust[expiry]").min = new Date();
     var movieOrder = document.getElementById("booking-form").scrollIntoView(true)
 }
+
+var totalErrors = 0;
+var totalTickets = 0;
 
 function clearError(){
     var errors = document.getElementsByClassName("error");
     for(var i = 0;i<errors.length;i++){
         errors[i].innerHTML = "";
     }
+    totalErrors = 0;
+    totalTickets = 0; 
 }
 
 function checkName() {
     var name = document.getElementById("cust[name]").value;
-    var patt = /^[A-Za-z\-\' ]+$/;
+    var patt = /^[a-z ,.'-]+ [a-z,.'-]+$/i;
     if(patt.test(name)) {
-        console.log("true");
         return true;  
     }
     else {
-        console.log("false");
+        totalErrors++;
+        document.getElementById("nameError").innerHTML = "<br>Please input a valid name";
         return false;
         
     }
 }
 
+function checkMobile() {
+    var mobile = document.getElementById("cust[mobile]").value;
+    var patt = /^(\(04\)|04|\+614)( ?\d){8}$/;
+    if(patt.test(mobile)) {
+        return true;
+    }
+    else {
+        totalErrors++;
+        document.getElementById("telError").innerHTML = "<br>Please input a valid mobile number";
+        return false;
+    }
+}
+
+function checkCard() {
+    var card = document.getElementById("cust[card]").value;
+    var patt = /^(\s?\d){14,19}$/
+    if(patt.test(card)) {
+        return true;
+    }
+    else {
+        
+        totalErrors++;
+        document.getElementById("cardError").innerHTML = "<br>Please input a valid card";
+        return false;
+    }
+}
+
+
+
+function checkMail() {
+    var email = document.getElementById("cust[email]").value;
+    var patt = /^[^@]+@[^\.]+\..+$/; 
+    if(patt.test(email)) {
+        return true;
+    }
+    else {
+        totalErrors++;
+        document.getElementById("emailError").innerHTML = "<br>Please input a valid email";
+        return false;
+    }
+}
+
+function checkMonth() {
+    var patt = /^[12]\d{3}-(0[1-9]|1[0-2])$/;
+    var fromForm = document.getElementById("cust[expiry]").value
+    var d = new Date();
+    var current = new Date(d.getFullYear(),d.getMonth());
+    var sup = new Date(fromForm);
+    var altered = new Date(sup.getFullYear(),sup.getMonth());
+    if(patt.test(fromForm)){
+        if(altered.getTime() <= current.getTime()){
+            document.getElementById("expiryError").innerHTML = "<br>The input date has expired"
+            totalErrors++;
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    else {
+        document.getElementById("expiryError").innerHTML = "<br>Please input a valid date in the format YYYY-MM";
+        totalErrors++;
+        return false;
+    }
+}
+
+function checkTickets() {
+    totalTickets += document.getElementById("seats[STA]").value;
+    totalTickets += document.getElementById("seats[STP]").value;
+    totalTickets += document.getElementById("seats[STC]").value;
+    totalTickets += document.getElementById("seats[FCA]").value;
+    totalTickets += document.getElementById("seats[FCP]").value;
+    totalTickets += document.getElementById("seats[FCC]").value;
+    if(totalTickets<=0)
+    {
+        document.getElementById("ticketError").innerHTML = "<br>Please select at least one ticket";
+        totalErrors++;
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
 function formCheck() {
+    clearError();
     checkName();
-    return (false);
+    checkMobile();
+    checkCard();
+    checkMail();
+    checkMonth();
+    checkTickets();
+    return(totalErrors==0);
 }
