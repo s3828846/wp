@@ -2,13 +2,6 @@
   To be used only in an emergency, ie
   when your A3 index.php page is broken 
 -->
-<!--testing php code here -->
-
-<?php
-  require_once("tools.php");
-?>
-
-
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -16,7 +9,6 @@
     <meta charset='utf-8'>
     <title>A4 Backup Page</title>
     <style>label { display: inline-block; width:90px; }</style>
-    <link id='stylebackup' type="text/css" rel="stylesheet" href="stylebackup.css?t=<?= filemtime("stylebackup.css"); ?>">
   </head>
 
   <body>
@@ -47,7 +39,6 @@
         <label>CustMobile</label><input type=text name='cust[mobile]'/><br>
         <label>CustCard</label><input type=text name='cust[card]'/><br>
         <label>CustExpiry</label><input type=text name='cust[expiry]'/><br>
-        <input type=submit value='Reset the session' name='session reset'>
         <input type=submit value='Book'/>
       </form>
     </main>
@@ -57,10 +48,3 @@
     
   </body>
 </html>
-
-<?php
-  
-  validateForm();
-  //endModule();
- 
-?>
