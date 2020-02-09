@@ -91,9 +91,21 @@
   ];
 
   $pricesObject = [
-    'full' => [
-      'STA' => '19.8'
-
+    'MT' => [
+      'STA' => '15.00',
+      'STP' => '13.00',
+      'STC' => '11.00',
+      'FTA' => '25.00',
+      'FTP' => '23.00',
+      'FTC' => '21.00'
+    ],
+    'SS' => [
+      'STA' => '20.50',
+      'STP' => '18.00',
+      'STC' => '15.50',
+      'FTA' => '30.00',
+      'FTP' => '27.50',
+      'FTC' => '25.00'
     ]
   ];
 
@@ -109,7 +121,7 @@
     echo "</div>";
   }
 
-  //form validation functions
+  //FORM VALIDATION FUNCTIONS
 
 
   //global variables for form validation
@@ -120,59 +132,90 @@
 
   //combine all validaton into one function
   function validateForm() {
-    global $moviesObject;
-    $test = array_column($moviesObject, 'Monday');
-    print_r($test);
-    //checkMovieData();
+    global $hiddenErrors;
+    if(!empty($_POST)) { //check that post is not empty
+      checkMovieData();
+      checkCustData();
+    }
   }
+  
   
   
   //collect all movie data validation into one function
   function checkMovieData() {
     global $hiddenErrors;
-    if(!checkMovieCode()){
-      $hiddenErrors++;
+    if(!empty($_POST['movie']['id']) && !empty($_POST['movie']['day']) && !empty($_POST['movie']['hour'])) { //ensure that all fields have some input
+      if(!checkMovieCode()){
+        echo "Code Error ";
+        $hiddenErrors++;
+      }
+      if(!checkMovieDay()) {
+        echo "Day error ";
+        $hiddenErrors++;
+      }
     }
-    if(!checkMovieDay()) {
-      $hiddenErrors++;
+    else {
+      echo "missing post data stop hacking";
     }
   }
 
   //combine all cust data validation into one function
   function checkCustData() {
-
+    global $custErrors;
+    if(!checkCustName()) {
+      echo "Name Error ";
+      $custErrors++;
+    }
   }
 
   function checkMovieCode() {
     global $moviesObject;
-    if(isset($_POST['movie']['id'])) {
-      $movieCodes = array_keys($moviesObject);
-      $length = count($movieCodes);
-      for ($i = 0; $i < $length; $i++){
-        if ($_POST['movie']['id'] == $movieCodes[$i]) {
-          return true;
-        }
+    $movieCodes = array_keys($moviesObject);
+    $length = count($movieCodes);
+    for ($i = 0; $i < $length; $i++){
+      if ($_POST['movie']['id'] == $movieCodes[$i]) {
+        return true;
       }
-      return false;
     }
-    return true;
+    return false;
   }
 
   function checkMovieDay() {
     global $moviesObject;
-    if(isset($_POST['movie']['day'])) {
-      $currentMovie = $_POST['movie']['day'];
-      $moviesDays = array_keys($moviesObject, 'screenings[$currentMovie]');
-      $length = count($movieDays);
-      for($i=0;$i<$length;$i++){
-        if($_POST['movie']['day'] == $movieDays[$i]) {
-          return true;
+    foreach ($moviesObject as $id => $idValue) {
+      if($id == $_POST['movie']['id']) {
+        foreach($idValue as $info => $infoValue) {           //is there a better way to do this - maybe with using array_keys of the internal Arrays
+          if($info == 'screenings') {
+            foreach($infoValue as $day => $dayValue) {
+              if($day == $_POST['movie']['day']) {
+                if($dayValue == $_POST['movie']['hour']){
+                  return true;
+                }                 //this can only be reached if the day and id are correct so you can check the time in the same check
+                else {
+                  return false;
+                }
+              }
+            }
+          }
         }
       }
+    }
+    return false;
+  }
+
+  function checkCustName() {
+    if(!empty($_POST['cust']['name'])) {
+      $patt = "#^[a-z ,.'-]+ [a-z,.'-]+$#i";
+      if(preg_match($patt, $_POST['cust']['name'])){
+        return true;
+      }
+    }
+    else {
       return false;
     }
-    return true;
   }
+
+
 
   function clearAllErrors() {
 

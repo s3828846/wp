@@ -6,6 +6,7 @@
 
 <?php
   require_once("tools.php");
+  validateForm();
 ?>
 
 
@@ -59,8 +60,6 @@
 </html>
 
 <?php
-  
-  validateForm();
   //endModule();
  
 ?>
