@@ -43,12 +43,11 @@
         <label>SeatsFCP</label><input type=text name='seats[FCP]'/><br>
         <label>SeatsFCC</label><input type=text name='seats[FCC]'/><br>
         <br>
-        <label>CustName</label><input type=text name='cust[name]'/><br>
-        <label>CustEmail</label><input type=text name='cust[email]'/><br>
+        <label>CustName</label><input type=text name='cust[name]' id='cust[name]'/><br>
+        <label>CustEmail</label><input type=text name='cust[email]' id='cust[email]' /><br>
         <label>CustMobile</label><input type=text name='cust[mobile]'/><br>
         <label>CustCard</label><input type=text name='cust[card]'/><br>
-        <label>CustExpiry</label><input type=text name='cust[expiry]'/><br>
-        <input type=submit value='Reset the session' name='session reset'>
+        <label>CustExpiry</label><input type=month name='cust[expiry]'/><br>
         <input type=submit value='Book'/>
       </form>
     </main>
@@ -61,5 +60,5 @@
 
 <?php
   //endModule();
- 
+  setupErrors();
 ?>

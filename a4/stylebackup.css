@@ -1,3 +1,6 @@
 
 /*css for index fall back */
 
+.errorField{
+    background-color: rgba(255, 0, 0, 0.521);
+}

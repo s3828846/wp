@@ -1,12 +1,6 @@
 <?php
   require_once("tools.php");
-  if (isset($_POST)) {
-    preShow($_POST);
-  }
-  if(!empty($_POST['cust']['name'])) {
-    echo "<p>Hello {$_POST['cust']['name']}</p>";
-  } 
-  printMyCode();
+  
 ?>
 
 <!DOCTYPE html>
@@ -284,7 +278,7 @@
           <fieldset id="standardPrices-form" class="fieldset">
             <legend>Standard</legend>
             <label for="seats[STA]" class="sSTA">Adults:</label>
-            <select name=seats[STA] id="seats[STA]" onclick=updatePrice() class="gSTA">
+            <select name=seats[STA] id="seats[STA]" onchange=updatePrice() class="gSTA">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -297,7 +291,7 @@
               <option value=9>9</option>
             </select>
             <label for="seats[STP]" class="sSTP">Concession:</label>
-            <select name="seats[STP]" id="seats[STP]" onclick=updatePrice() class="gSTP">
+            <select name="seats[STP]" id="seats[STP]" onchange=updatePrice() class="gSTP">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -310,7 +304,7 @@
               <option value=9>9</option>
             </select>
             <label for="seats[STC]" class=sSTC>Child:</label>
-            <select name="seats[STC]" id="seats[STC]" onclick=updatePrice() class="gSTC">
+            <select name="seats[STC]" id="seats[STC]" onchange=updatePrice() class="gSTC">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -326,7 +320,7 @@
           <fieldset id="firstClassPrices-form" class="fieldset">
             <legend>First Class</legend>
             <label for="seats[FCA]" class="sSTA">Adults</label>
-            <select name=seats[FCA] id="seats[FCA]" onclick=updatePrice() class="gSTA">
+            <select name=seats[FCA] id="seats[FCA]" onchange=updatePrice() class="gSTA">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -339,7 +333,7 @@
               <option value=9>9</option>
             </select>
             <label for="seats[FCP]" class=sSTP>Concession:</label>
-            <select name="seats[FCP]" id="seats[FCP]" onclick=updatePrice() class="gSTP">
+            <select name="seats[FCP]" id="seats[FCP]" onchange=updatePrice() class="gSTP">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -352,7 +346,7 @@
               <option value=9>9</option>
             </select>
             <label for="seats[FCC]" class="sSTC">Child:</label>
-            <select name="seats[FCC]" id="seats[FCC]" onclick=updatePrice() class="gSTC">
+            <select name="seats[FCC]" id="seats[FCC]" onchange=updatePrice() class="gSTC">
               <option value=0>Please Select</option>
               <option value=1>1</option>
               <option value=2>2</option>
@@ -401,5 +395,8 @@
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div> 
     </footer>
     <script src="script.js"> </script> <!--Script source for site-->
+    <?php
+      endModule();
+    ?>
   </body>
 </html>

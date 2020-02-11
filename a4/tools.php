@@ -27,13 +27,6 @@
     echo "var $arrName = " . json_encode($arr, JSON_PRETTY_PRINT);
     echo "</script>\n\n";
   }
-
-  if(isset($_POST['session-reset'])) {
-    foreach($_Session as $something => &$whatever) {
-      unset($whatever);
-    }
-  }
-
   //end of provided functions
 
   //associative arrays for movies and prices
@@ -128,11 +121,17 @@
   $hiddenErrors = 0;
   $custErrors = 0;    
   $totaltickets = 0;
+  $nameError = false;
+  $emailError = false;
+  $mobileError = false;
+  $cardError = false;
+  $exipryError = false;
 
 
   //combine all validaton into one function
   function validateForm() {
     global $hiddenErrors;
+    preShow($_POST);
     if(!empty($_POST)) { //check that post is not empty
       checkMovieData();
       checkCustData();
@@ -144,7 +143,7 @@
   //collect all movie data validation into one function
   function checkMovieData() {
     global $hiddenErrors;
-    if(!empty($_POST['movie']['id']) && !empty($_POST['movie']['day']) && !empty($_POST['movie']['hour'])) { //ensure that all fields have some input
+    if(!empty($_POST['movie']['id']) || !empty($_POST['movie']['day']) || !empty($_POST['movie']['hour'])) { //ensure that all fields have some input
       if(!checkMovieCode()){
         echo "Code Error ";
         $hiddenErrors++;
@@ -162,10 +161,29 @@
   //combine all cust data validation into one function
   function checkCustData() {
     global $custErrors;
+    global $nameError;
+    global $emailError;
+    global $mobileError;
+    global $cardError;
+    global $exipryError;
     if(!checkCustName()) {
-      echo "Name Error ";
       $custErrors++;
+      $nameError = true;
     }
+    if(!checkCustEmail()) {
+      $custErrors++;
+      $emailError = true;
+    }
+    if(!checkCustCard()) {
+      $custErrors++;
+      $cardError = true;
+    }
+    if(!checkCustMobile()){
+      $custErrors++;
+      $mobileError = true;
+    }
+    
+    
   }
 
   function checkMovieCode() {
@@ -215,13 +233,65 @@
     }
   }
 
-
-
-  function clearAllErrors() {
-
+  function checkCustEmail() {
+    if(!empty($_POST['cust']['name'])) {
+      $patt = "#^[^@]+@[^\.]+\..+$#";
+      if(preg_match($patt,$_POST['cust']['email'])){
+        return true;
+      }
+    }
+    else {
+      return false;
+    }
   }
 
-  function checkName() {
+  function checkCustMobile() {
+    if(!empty($_POST['cust']['mobile'])) {
+      $patt = "#^(\(04\)|04|\+614)( ?\d){8}$#";
+      if(preg_match($patt,$_POST['cust']['mobile'])) {
+        return true;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+
+  function checkCustCard() {
+    if(!empty($_POST['cust']['card'])) {
+      $patt = "#^(\s?\d){14,19}$#";
+      if(preg_match($patt,$_POST['cust']['card'])) {
+        return true;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+
+  function checkCustExpiry() {
+    if(!empty($_POST['cust']['expiry'])) {
+      $patt = "#^[12]\d{3}-(0[1-9]|1[0-2])$#";
+      if(preg_match($patt,$_POST['cust']['expiry'])) {
+        //today = strtotime(date("Y/m/d");
+        //$futureMonth = 
+        return true;
+      }
+    }
+  }
+
+  function setupErrors() {
+    global $nameError;
+    global $emailError;
+    global $mobileError;
+    global $cardError;
+    global $exipryError;
+    if($nameError == true) {
+      echo "<script>document.getElementById('cust[name]').classList.add('errorField')</script>";
+    }
+    if($emailError == true) {
+      echo "<script>document.getElementById('cust[email]').classList.add('errorField')</script>";
+    }
 
   }
   
