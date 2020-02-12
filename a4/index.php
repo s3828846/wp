@@ -1,6 +1,6 @@
 <?php
   require_once("tools.php");
-  
+  validateForm();
 ?>
 
 <!DOCTYPE html>
@@ -269,7 +269,7 @@
           </div>
         </div>
       </section>
-        <form action="index.php" method="post" target="_blank" id="booking-form" onsubmit="">
+        <form action="index.php" method="post" id="booking-form">
           <input type="hidden" name="movie[id]" id="movie[id]" value="Title">
           <input type="hidden" name="movie[day]" id="movie[day]" value="Day">
           <input type="hidden" name="movie[hour]" id="movie[hour]" value="Hour">
@@ -396,7 +396,8 @@
     </footer>
     <script src="script.js"> </script> <!--Script source for site-->
     <?php
-      endModule();
+      //endModule();
+      setupErrors();
     ?>
   </body>
 </html>

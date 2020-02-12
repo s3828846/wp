@@ -130,11 +130,11 @@
 
   //combine all validaton into one function
   function validateForm() {
-    global $hiddenErrors;
     preShow($_POST);
     if(!empty($_POST)) { //check that post is not empty
       checkMovieData();
       checkCustData();
+      checkSeatData();
     }
   }
   
@@ -143,18 +143,16 @@
   //collect all movie data validation into one function
   function checkMovieData() {
     global $hiddenErrors;
-    if(!empty($_POST['movie']['id']) || !empty($_POST['movie']['day']) || !empty($_POST['movie']['hour'])) { //ensure that all fields have some input
+    if(!empty($_POST['movie']['id']) && !empty($_POST['movie']['day']) && !empty($_POST['movie']['hour'])) { //ensure that all fields have some input
       if(!checkMovieCode()){
-        echo "Code Error ";
         $hiddenErrors++;
       }
       if(!checkMovieDay()) {
-        echo "Day error ";
         $hiddenErrors++;
       }
     }
     else {
-      echo "missing post data stop hacking";
+      $hiddenErrors++;
     }
   }
 
@@ -182,8 +180,20 @@
       $custErrors++;
       $mobileError = true;
     }
+    if(!checkCustexpiry()){
+      $custErrors++;
+      $exipryError = true;
+    }
     
-    
+  }
+
+  //collect all seat validation into one function
+  function checkSeatData(){
+    if(isset($_POST['seats'])) {
+      if(!is_array($_POST['seats']) || !count($_POST['seats']>0)){
+
+      }
+    }
   }
 
   function checkMovieCode() {
@@ -228,9 +238,7 @@
         return true;
       }
     }
-    else {
-      return false;
-    }
+    return false;
   }
 
   function checkCustEmail() {
@@ -240,9 +248,7 @@
         return true;
       }
     }
-    else {
-      return false;
-    }
+    return false;
   }
 
   function checkCustMobile() {
@@ -252,9 +258,7 @@
         return true;
       }
     }
-    else {
-      return false;
-    }
+    return false;
   }
 
   function checkCustCard() {
@@ -264,20 +268,21 @@
         return true;
       }
     }
-    else {
-      return false;
-    }
+    return false;
   }
 
   function checkCustExpiry() {
-    if(!empty($_POST['cust']['expiry'])) {
+    $expiry = $_POST['cust']['expiry'];
+    if(!empty($expiry)) {
       $patt = "#^[12]\d{3}-(0[1-9]|1[0-2])$#";
-      if(preg_match($patt,$_POST['cust']['expiry'])) {
-        //today = strtotime(date("Y/m/d");
-        //$futureMonth = 
-        return true;
+      if(preg_match($patt,$expiry)) {
+        $today = date("Y-m");
+        if($expiry > $today) {
+          return true;
+        }
       }
     }
+    return false;
   }
 
   function setupErrors() {
@@ -286,11 +291,26 @@
     global $mobileError;
     global $cardError;
     global $exipryError;
+    global $hiddenErrors;
     if($nameError == true) {
       echo "<script>document.getElementById('cust[name]').classList.add('errorField')</script>";
     }
     if($emailError == true) {
       echo "<script>document.getElementById('cust[email]').classList.add('errorField')</script>";
+    }
+    if($mobileError == true) {
+      echo "<script>document.getElementById('cust[mobile]').classList.add('errorField')</script>";
+    }
+    if($cardError == true) {
+      echo "<script>document.getElementById('cust[card]').classList.add('errorField')</script>";
+    }
+    if($exipryError == true) {
+      echo "<script>document.getElementById('cust[expiry]').classList.add('errorField')</script>";
+    }
+    if($hiddenErrors != 0){
+      echo '<script>';
+      echo ' alert("Stop Hacking our website please")';  
+      echo '</script>';
     }
 
   }

@@ -45,9 +45,9 @@
         <br>
         <label>CustName</label><input type=text name='cust[name]' id='cust[name]'/><br>
         <label>CustEmail</label><input type=text name='cust[email]' id='cust[email]' /><br>
-        <label>CustMobile</label><input type=text name='cust[mobile]'/><br>
-        <label>CustCard</label><input type=text name='cust[card]'/><br>
-        <label>CustExpiry</label><input type=month name='cust[expiry]'/><br>
+        <label>CustMobile</label><input type=text name='cust[mobile]' id='cust[mobile]'/><br>
+        <label>CustCard</label><input type=text name='cust[card]' id='cust[card]'/><br>
+        <label>CustExpiry</label><input type=month name='cust[expiry]' id='cust[expiry]'/><br>
         <input type=submit value='Book'/>
       </form>
     </main>
