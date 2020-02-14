@@ -1,0 +1,101 @@
+body {
+    background: rgb(204,204,204);
+}
+
+displayPage {
+    background: white;
+    display: block;
+    margin: auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+displayPage[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+}
+
+@media print {
+    body, displayPage {
+      margin: 0;
+      box-shadow: 0;
+    }
+    .noprint {
+        display: none;
+    }
+  }
+
+
+  /*NB all the above code is based on the code provided at following site to display as an a4 page on the screen
+  /*https://codepen.io/rafaelcastrocouto/pen/LFAes - Produced by a user by the name (rafaelcastrocouto)
+  /*also is based on code from https://www.arclab.com/en/kb/htmlcss/how-to-print-a-specific-part-of-a-html-page-css-media-screen-print.html provided by arclab
+  /* comments provided are however of my own use*/
+
+
+
+  .header {
+      background: hsl(207, 100%, 45%);
+      width: 100%;
+      display: flex;
+      position: relative;
+  }
+
+  .logocontainer{
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 10px;
+  }
+
+  .content {
+      color: white;
+      font-size: 10;
+      text-align: left;
+      position: absolute;
+      top: 8px;
+      right: 16px;
+  }
+
+  #custinfo {
+      margin-left: 10px;
+  }
+
+  #movieDetails{
+    margin: 10px;
+  }
+
+  #ticketSales {
+    margin: 10px;
+  }
+
+  #ticket {
+      border-bottom: solid;
+      border-width: 1px;
+  }
+
+  #price {
+    border-bottom: solid;
+    border-width: 1px; 
+  }
+
+  .ticket{
+      border-style: solid;
+      border-width: 1px;
+      position: relative;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-left: 5px;
+      margin-top: 5px;
+  }
+
+  .barcode{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+
+  #debug {
+      border-top: solid;
+      border-width: 2px;
+  }
+  
+

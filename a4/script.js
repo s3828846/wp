@@ -79,13 +79,14 @@ function swapSynopsis(recieved) {
     }
 }
 
-function movieAssignment(title,day,hour,type,priceGuide) {
+function movieAssignment(title,day,hour,type,priceGuide,recieved) {
     document.getElementById("movie[id]").value = type;
     document.getElementById("movie[hour]").value = hour;
     document.getElementById("movie[day]").value = day;
     document.getElementById("movieInfo").innerHTML = title + " " + day + " " + hour;
-    document.getElementById("booking-form").style.display = "grid";
+    document.getElementById("booking-form").style.display = "grid";    
     document.getElementById("cust[expiry]").min = new Date();
+    document.getElementById("synCode").value = recieved;
     setPrice(priceGuide);
     updatePrice()
     var movieOrder = document.getElementById("booking-form").scrollIntoView(true)
@@ -100,6 +101,7 @@ function setPrice(priceGuide){
         FCA = priceObject["Pre"]["One"]["adu"];
         FCP = priceObject["Pre"]["One"]["con"];
         FCC = priceObject["Pre"]["One"]["chi"];
+        document.getElementById("seatPricing").value = "MT";
     }
     if(priceGuide == 2){
         STA = priceObject["Std"]["Two"]["adu"];
@@ -108,6 +110,7 @@ function setPrice(priceGuide){
         FCA = priceObject["Pre"]["Two"]["adu"];
         FCP = priceObject["Pre"]["Two"]["con"];
         FCC = priceObject["Pre"]["Two"]["chi"];
+        document.getElementById("seatPricing").value = "SS";
     }
 }
 

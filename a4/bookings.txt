@@ -1,1 +1,11 @@
 Date	Name	Email	Mobile	MovieID	Day	Hour	"STA Qty"	"STP Qty"	"STC Qty"	"FCA Qty"	"FCP Qty"	"FCC Qty"	Total
+2020/02/14	"O D"	123@w.comn	"04 12345678"	ACT	Monday	12pm	1	0	0	0	0	0	15
+2020/02/14	"O D"	123@w.comn	"04 12345678"	ACT	Monday	12pm	1	0	0	0	0	0	15
+2020/02/14	"O D"	q@s.com	"04 12345678"	RMC	Monday	6pm	1	0	0	0	0	0	15
+2020/02/14	"O q"	q@s.com	"04 12345678"	RMC	Monday	6pm	1	0	0	0	0	0	15
+2020/02/14	"O q"	q@s.com	"04 12345678"	RMC	Monday	6pm	1	0	0	0	0	0	15
+2020/02/14	"O q"	q@s.com	"04 12345678"	AHF	Saturday	9pm	1	0	0	0	0	0	20.5
+2020/02/14	"O D"	123@w.comn	"04 12345678"	AHF	Sunday	9pm	1	0	0	0	0	0	20.5
+2020/02/14	"O q"	q@s.com	"04 12345678"	RMC	Monday	6pm	1	0	0	0	0	0	15
+2020/02/14	"Oliver Dunn"	a@a.com	"04 12345678"	RMC	Tuesday	6pm	5	2	4	2	7	1	377
+2020/02/14	"Oliver Dunn"	123@w.comn	"04 12345678"	AHF	Wednesday	12pm	9	0	0	0	0	0	135

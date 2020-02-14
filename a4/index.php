@@ -209,13 +209,13 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Monday','12pm','ACT',1)>Monday - 12pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Tuesday','12pm','ACT',1)>Tuesday - 12pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Wednesday','6pm','ACT',2)>Wednesday - 6pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Thursday','6pm','ACT',2)>Thursday - 6pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Friday','6pm','ACT',2)>Friday - 6pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Saturday','12pm','ACT',2)>Saturday - 12pm</button>
-            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Sunday','12pm','ACT',2)>Sunday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Monday','12pm','ACT',1,1)>Monday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Tuesday','12pm','ACT',1,1)>Tuesday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Wednesday','6pm','ACT',2,1)>Wednesday - 6pm</button>   <!--could be replaced with php code but limited time-->
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Thursday','6pm','ACT',2,1)>Thursday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Friday','6pm','ACT',2,1)>Friday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Saturday','12pm','ACT',2,1)>Saturday - 12pm</button>
+            <button type="button" onclick=movieAssignment('Star\tWars:\tThe\tRise\tof\tSkywalker','Sunday','12pm','ACT',2,1)>Sunday - 12pm</button>
           </div>
         </div>
         <div id="synopsisANM">
@@ -228,11 +228,11 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button" onclick=movieAssignment('Frozen\t2','Wednesday','9pm','ANM',2)>Wednesday - 9pm</button>
-            <button type="button" onclick=movieAssignment('Frozen\t2','Thursday','9pm','ANM',2)>Thursday - 9pm</button>
-            <button type="button" onclick=movieAssignment('Frozen\t2','Friday','9pm','ANM',2)>Friday - 9pm</button>
-            <button type="button" onclick=movieAssignment('Frozen\t2','Saturday','6pm','ANM',2)>Saturday - 6pm</button>
-            <button type="button" onclick=movieAssignment('Frozen\t2','Sunday','6pm','ANM',2)>Sunday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Wednesday','9pm','ANM',2,2)>Wednesday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Thursday','9pm','ANM',2,2)>Thursday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Friday','9pm','ANM',2,2)>Friday - 9pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Saturday','6pm','ANM',2,2)>Saturday - 6pm</button>
+            <button type="button" onclick=movieAssignment('Frozen\t2','Sunday','6pm','ANM',2,2)>Sunday - 6pm</button>
           </div>
         </div>
         <div id="synopsisRMC">
@@ -245,10 +245,10 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button" onclick=movieAssignment('The\tAeronauts','Monday','6pm','RMC',1)>Monday - 6pm</button>
-            <button type="button" onclick=movieAssignment('The\tAeronauts','Tuesday','6pm','RMC',1)>Tuesday - 6pm</button>
-            <button type="button" onclick=movieAssignment('The\tAeronauts','Saturday','3pm','RMC',2)>Saturday - 3pm</button>
-            <button type="button" onclick=movieAssignment('The\tAeronauts','Sunday','3pm','RMC',2)>Sunday - 3pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Monday','6pm','RMC',1,3)>Monday - 6pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Tuesday','6pm','RMC',1,3)>Tuesday - 6pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Saturday','3pm','RMC',2,3)>Saturday - 3pm</button>
+            <button type="button" onclick=movieAssignment('The\tAeronauts','Sunday','3pm','RMC',2,3)>Sunday - 3pm</button>
           </div>
         </div>
         <div id="synopsisAHF">
@@ -261,18 +261,20 @@
             <!-- code for iframe copied from the youtube provided source, sharing and selecting embed on a youtube video provides a code snippet to imbed the video in the page-->
           </div>
           <div class="buttongroup">
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Wednesday','12pm','AHF',1)>Wednesday - 12pm</button>
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Thursday','12pm','AHF',1)>Thursday - 12pm</button>
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Friday','12pm','AHF',1)>Friday - 12pm</button>
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Saturday','9pm','AHF',2)>Saturday - 9pm</button>
-            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Sunday','9pm','AHF',2)>Sunday - 9pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Wednesday','12pm','AHF',1,4)>Wednesday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Thursday','12pm','AHF',1,4)>Thursday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Friday','12pm','AHF',1,4)>Friday - 12pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Saturday','9pm','AHF',2,4)>Saturday - 9pm</button>
+            <button type="button" onclick=movieAssignment('JoJo\tRabbit','Sunday','9pm','AHF',2,4)>Sunday - 9pm</button>
           </div>
         </div>
       </section>
-        <form action="index.php" method="post" id="booking-form">
+        <form action="index.php#showing" method="post" id="booking-form">
           <input type="hidden" name="movie[id]" id="movie[id]" value="Title">
           <input type="hidden" name="movie[day]" id="movie[day]" value="Day">
           <input type="hidden" name="movie[hour]" id="movie[hour]" value="Hour">
+          <input type="hidden" name="seatPricing" id="seatPricing" value="value">
+          <input type="hidden" name="synCode" id="synCode" value=1;> <!-- value to rerun js if a movie was selected-->
           <h2 id="movieInfo">Movie Title - Day - Time</h2>
           <span class='error' id='ticketError'></span>
           <fieldset id="standardPrices-form" class="fieldset">
@@ -362,20 +364,36 @@
           <fieldset id="custInfo" class="fieldset">
             <legend>Customer</legend>
             <label for="cust[name]" id="nameId">Name:</label>
-            <input type="text" name="cust[name]" id="cust[name]" placeholder="First Last">
+            <input type="text" name="cust[name]" id="cust[name]" placeholder="First Last" 
+            value="<?php
+                  isset($_POST['cust']['name']) ? addValue($_POST['cust']['name']) : "";
+              ?>"
+        />
             <span class='error' id='nameError'></span>
             <label for="cust[email]" id="emailId">Email:</label>
-            <input type="email" name="cust[email]" id="cust[email]" placeholder="example@server.com">
+            <input type="email" name="cust[email]" id="cust[email]" placeholder="example@server.com" 
+            value="<?php
+                  isset($_POST['cust']['email']) ? addValue($_POST['cust']['email']) : "";
+              ?>"/>
             <span class='error' id='emailError'></span>
             <label for="cust[mobile]" id="mobileId">Mobile:</label>
-            <input type="tel" name="cust[mobile]" id="cust[mobile]" placeholder="04 12345678">
+            <input type="tel" name="cust[mobile]" id="cust[mobile]" placeholder="04 12345678" 
+            value="<?php
+                  isset($_POST['cust']['mobile']) ? addValue($_POST['cust']['mobile']) : "";
+              ?>"/>
             <span class='error' id='telError'></span>
             <label for="cust[card]" id="cardId">Credit Card:</label>
-            <input type="text" name="cust[card]" id="cust[card]" placeholder="1234 5678 8101 1121"></label>
-            
+            <input type="text" name="cust[card]" id="cust[card]" placeholder="1234 5678 8101 1121"
+            value="<?php
+                  isset($_POST['cust']['card']) ? addValue($_POST['cust']['card']) : "";
+              ?>"/></label>
             <span class='error' id='expiryError'></span>
             <label for="cust[expiry]" id="expiryId">Expiry:</label>
-            <input type="month" name="cust[expiry]" id="cust[expiry]" placeholder="YYYY-MM" min>
+            <input type="month" name="cust[expiry]" id="cust[expiry]" placeholder="YYYY-MM" min=''
+            value="<?php
+                  isset($_POST['cust']['expiry']) ? addValue($_POST['cust']['expiry']) : "";
+              ?>"/>
+            
             <span class='error' id='finalError'></span>
           </fieldset>
           <label for="orderPrice" id="total">Total:</label> 
@@ -396,7 +414,7 @@
     </footer>
     <script src="script.js"> </script> <!--Script source for site-->
     <?php
-      //endModule();
+      endModule();  //the code here is ugly cuz the length is too long -- if time come back and edit
       setupErrors();
     ?>
   </body>
