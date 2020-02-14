@@ -180,6 +180,7 @@
     }
   }
 
+  //generates the ticket page to hold tickets for each ticket type
   function tickePage() {
     echo "<div class='header'>
             <div class='logocontainer'>
@@ -196,6 +197,8 @@
           </div>";
   }
 
+  //generates individual tickets for each ticket type 
+  //they are not the best looking but they are reasonable 
   function ticketGenerator($code){
     global $moviesObject;
     $totalTickets = $_SESSION['seats'][$code];;
